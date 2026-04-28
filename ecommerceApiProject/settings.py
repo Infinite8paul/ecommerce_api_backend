@@ -31,10 +31,8 @@ SECRET_KEY = 'django-insecure-yh9y&8b8e280zd)@40jburrr8zo(!r$!tqs7tep(gu&76gdt$i
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-# ALLOWED_HOSTS = ["b4cc-102-90-102-33.ngrok-free.app", "127.0.0.1"]
-#CSRF_TRUSTED_ORIGINS = ["https://ytecommerceapi2025-production.up.railway.app"]
 CSRF_TRUSTED_ORIGINS=[
-                        "https://invigorating-communication-production.up.railway.app/"
+                        "https://invigorating-communication-production.up.railway.app"
                       ]
 
 ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', 'localhost,127.0.0.1').split(',') + ['.railway.app']
