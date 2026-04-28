@@ -33,7 +33,10 @@ DEBUG = True
 
 # ALLOWED_HOSTS = ["b4cc-102-90-102-33.ngrok-free.app", "127.0.0.1"]
 #CSRF_TRUSTED_ORIGINS = ["https://ytecommerceapi2025-production.up.railway.app"]
-CSRF_TRUSTED_ORIGINS=["https://ecommerceapibackend-production-7203.up.railway.app","http://127.0.0.1:8008"]
+CSRF_TRUSTED_ORIGINS=[
+                        "https://ecommerceapibackend-production-7203.up.railway.app",
+                        "https://ecommerceapibackend-production.up.railway.app"
+                      ]
 
 ALLOWED_HOSTS = ["*"]
 
