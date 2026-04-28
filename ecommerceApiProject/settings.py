@@ -101,7 +101,7 @@ WSGI_APPLICATION = 'ecommerceApiProject.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases 
 
-DB_LIVE = os.getenv("DB_LIVE")
+"""DB_LIVE = os.getenv("DB_LIVE")
 # If you set DB to True you will have the postgres database, if set DB to False, you will the sqlite3 databse.
 
 
@@ -115,17 +115,17 @@ if DB_LIVE in ["False",False]:
         }
     }
 else:
-#Production PostgresSQL
-    DATABASES = {
-                    'default': {
-                                    'ENGINE': 'django.db.backends.postgresql',
-                                    'NAME': 'railway',
-                                    'USER': 'postgres',
-                                    'PASSWORD': os.getenv("DB_PASSWORD"),
-                                    'HOST': os.getenv("DB_HOST"),
-                                    'PORT': os.getenv("DB_PORT"),  
-                                }
-                }
+#Production PostgresSQL"""
+DATABASES = {
+                'default': {
+                                'ENGINE': 'django.db.backends.postgresql',
+                                'NAME': 'railway',
+                                'USER': 'postgres',
+                                'PASSWORD': os.getenv("DB_PASSWORD"),
+                                'HOST': os.getenv("DB_HOST"),
+                                'PORT': os.getenv("DB_PORT"),  
+                            }
+            }
 
 
 

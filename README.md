@@ -567,3 +567,15 @@ python manage.py loaddata data.json
 **8. Test your application thoroughly.**
 
 ---
+---
+
+```
+##Railway.com postgres deployment
+
+**Predeploy commands
+Initial deploy with empty database: python manage.py migrate && python manage.py createsuperuser --noinput
+Subsequent deploys (after initial deploy) :python manage.py migrate 
+
+**Custom start command
+python manage.py migrate && gunicorn ecommerceApiProject.wsgi:application --bind 0.0.0.0:$PORT
+```
