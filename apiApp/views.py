@@ -13,6 +13,17 @@ from .serializers import CartItemSerializer, CartSerializer, CategoryDetailSeria
 from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
 
+
+import json
+import hmac
+import hashlib
+import requests
+from django.conf import settings
+from django.http import HttpResponse
+from django.views.decorators.csrf import csrf_exempt
+from rest_framework.decorators import api_view
+from rest_framework.response import Response
+
 # Create your views here.
 stripe.api_key = settings.STRIPE_SECRET_KEY
 endpoint_secret = settings.WEBHOOK_SECRET
@@ -170,108 +181,120 @@ def product_search(request):
 
 
 
+#Checkout and Payment
 
+# ==========================================
+# Checkout and Payment (Paystack Integration)
+# ==========================================
 
 @api_view(['POST'])
-def create_checkout_session(request):
+def initialize_paystack_payment(request):
     cart_code = request.data.get("cart_code")
     email = request.data.get("email")
-    cart = Cart.objects.get(cart_code=cart_code)
+    
     try:
-        checkout_session = stripe.checkout.Session.create(
-            customer_email= email,
-            payment_method_types=['card'],
+        cart = Cart.objects.get(cart_code=cart_code)
+        
+        # 1. Calculate the total amount in cents (or kobo)
+        total_amount = sum(int(item.product.price * 100) * item.quantity for item in cart.cartitems.all())
+        total_amount += 500  # Adding the $5 VAT Fee (500 cents)
 
-
-            line_items=[
-                {
-                    'price_data': {
-                        'currency': 'usd',
-                        'product_data': {'name': item.product.name},
-                        'unit_amount': int(item.product.price * 100),  # Amount in cents
-                    },
-                    'quantity': item.quantity,
-                }
-                for item in cart.cartitems.all()
-            ] + [
-                {
-                    'price_data': {
-                        'currency': 'usd',
-                        'product_data': {'name': 'VAT Fee'},
-                        'unit_amount': 500,  # $5 in cents
-                    },
-                    'quantity': 1,
-                }
-            ],
-
-
-           
-            mode='payment',
-            # success_url="http://localhost:3000/success",
-            # cancel_url="http://localhost:3000/cancel",
-
-            success_url="https://next-shop-self.vercel.app/success",
-            cancel_url="https://next-shop-self.vercel.app/failed",
-            metadata = {"cart_code": cart_code}
+        # 2. Prepare the payload for Paystack
+        headers = {
+            "Authorization": f"Bearer {settings.PAYSTACK_SECRET_KEY}",
+            "Content-Type": "application/json"
+        }
+        
+        payload = {
+            "email": email,
+            "amount": total_amount,
+            "currency": "KES", # Change to GHS, NGN, ZAR etc depending on your region
+            "callback_url": "http://localhost:3000/success", 
+            "metadata": {
+                "cart_code": cart_code,
+                "cancel_action": "http://localhost:3000/cancel"
+            }
+        }
+        
+        # 3. Call Paystack API to initialize transaction
+        response = requests.post(
+            'https://api.paystack.co/transaction/initialize', 
+            json=payload, 
+            headers=headers
         )
-        return Response({'data': checkout_session})
+        response_data = response.json()
+        
+        if response_data.get('status'):
+            # Return the authorization URL to the frontend so Next.js can redirect the user
+            return Response({'data': {'checkout_url': response_data['data']['authorization_url']}})
+        else:
+            return Response({'error': response_data.get('message', 'Failed to initialize payment')}, status=400)
+            
     except Exception as e:
         return Response({'error': str(e)}, status=400)
 
 
-
-
 @csrf_exempt
-def my_webhook_view(request):
-  payload = request.body
-  sig_header = request.META['HTTP_STRIPE_SIGNATURE']
-  event = None
-
-  try:
-    event = stripe.Webhook.construct_event(
-      payload, sig_header, endpoint_secret
-    )
-  except ValueError as e:
-    # Invalid payload
-    return HttpResponse(status=400)
-  except stripe.error.SignatureVerificationError as e:
-    # Invalid signature
-    return HttpResponse(status=400)
-
-  if (
-    event['type'] == 'checkout.session.completed'
-    or event['type'] == 'checkout.session.async_payment_succeeded'
-  ):
-    session = event['data']['object']
-    cart_code = session.get("metadata", {}).get("cart_code")
-
-    fulfill_checkout(session, cart_code)
-
-
-  return HttpResponse(status=200)
-
-
-
-def fulfill_checkout(session, cart_code):
+def paystack_webhook(request):
+    payload = request.body
+    # Paystack sends the signature in the x-paystack-signature header
+    sig_header = request.META.get('HTTP_X_PAYSTACK_SIGNATURE')
     
-    order = Order.objects.create(stripe_checkout_id=session["id"],
-        amount=session["amount_total"],
-        currency=session["currency"],
-        customer_email=session["customer_email"],
-        status="Paid")
+    # Verify the signature using HMAC SHA512
+    secret = settings.PAYSTACK_SECRET_KEY.encode('utf-8')
+    hash_signature = hmac.new(secret, payload, hashlib.sha512).hexdigest()
     
+    if hash_signature != sig_header:
+        return HttpResponse(status=400) # Invalid signature
+        
+    try:
+        event = json.loads(payload)
+    except ValueError:
+        return HttpResponse(status=400) # Invalid JSON
 
-    print(session)
+    # Listen for successful charges
+    if event.get('event') == 'charge.success':
+        data = event['data']
+        cart_code = data.get("metadata", {}).get("cart_code")
+        
+        # Extract necessary details
+        reference = data.get("reference")
+        amount = data.get("amount") / 100  # Convert back to standard currency unit
+        currency = data.get("currency")
+        customer_email = data.get("customer", {}).get("email")
+        
+        if cart_code:
+            fulfill_checkout(reference, amount, currency, customer_email, cart_code)
+
+    return HttpResponse(status=200)
 
 
-    cart = Cart.objects.get(cart_code=cart_code)
-    cartitems = cart.cartitems.all()
-
-    for item in cartitems:
-        orderitem = OrderItem.objects.create(order=order, product=item.product, 
-                                             quantity=item.quantity)
-    
-    cart.delete()
+def fulfill_checkout(reference, amount, currency, email, cart_code):
+    try:
+        # Note: You may want to rename 'stripe_checkout_id' to 'transaction_reference' in your models.py
+        order = Order.objects.create(
+            stripe_checkout_id=reference, 
+            amount=amount,
+            currency=currency,
+            customer_email=email,
+            status="Paid"
+        )
+        
+        cart = Cart.objects.get(cart_code=cart_code)
+        
+        # Move items from Cart to Order
+        for item in cart.cartitems.all():
+            OrderItem.objects.create(
+                order=order, 
+                product=item.product, 
+                quantity=item.quantity
+            )
+        
+        # Clear the cart
+        cart.delete()
+    except Cart.DoesNotExist:
+        # Cart might have already been processed and deleted
+        pass
 
 
 
