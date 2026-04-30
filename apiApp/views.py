@@ -412,6 +412,17 @@ def get_cart_stat(request):
         return Response(serializer.data)
     return Response({"error": "Cart not found."}, status=status.HTTP_404_NOT_FOUND)
 
+@api_view(["GET"])
+def check_cart_existence(request):
+    cart_code = request.query_params.get("cart_code")
+    cart = Cart.objects.filter(cart_code=cart_code).first()
+
+    if cart:
+        return Response({"cart_code":cart_code,"cart_existance":"cart_exists"})
+
+    return Response({"cart_code":cart_code,"cart_existance":"cart_does_exists"})
+
+
 
 @api_view(['GET'])
 def product_in_cart(request):

@@ -29,6 +29,8 @@ urlpatterns = [
     path("get_address", views.get_address, name="get_address"),
     path("my_wishlists", views.my_wishlists, name="my_wishlists"),
     path("product_in_wishlist", views.product_in_wishlist, name="product_in_wishlist"),
+
+    path("check_cart_existence/<str:cart_code>", views.check_cart_existence, name="check_cart_existence"),
     path("get_cart/<str:cart_code>", views.get_cart, name="get_cart"),
     path("get_cart_stat", views.get_cart_stat, name="get_cart_stat"),
     path("product_in_cart", views.product_in_cart, name="product_in_cart")
