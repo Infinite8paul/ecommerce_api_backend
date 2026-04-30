@@ -417,9 +417,9 @@ def check_cart_existence(request,cart_code):
     cart = Cart.objects.filter(cart_code=cart_code).first()
 
     if cart:
-        return Response({"cart_code":cart_code,"cart_existance":"cart_exists"})
+        return Response({"true"})
 
-    return Response({"cart_code":cart_code,"cart_existance":"cart_does_not_exist"})
+    return Response({"false"})
 
 
 
