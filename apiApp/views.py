@@ -209,10 +209,14 @@ def initialize_paystack_payment(request):
             "email": email,
             "amount": total_amount,
             "currency": "KES", # Change to GHS, NGN, ZAR etc depending on your region
-            "callback_url": "http://localhost:3000/success", 
+            #"callback_url": "http://localhost:3000/success", 
+            "callback_url": "https://digitalshop-frontend.vercel.app/success", 
+            
+
             "metadata": {
                 "cart_code": cart_code,
-                "cancel_action": "http://localhost:3000/cancel"
+                #"cancel_action": "http://localhost:3000/cancel"
+                "cancel_action": "https://digitalshop-frontend.vercel.app/"
             }
         }
         
