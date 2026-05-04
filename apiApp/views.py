@@ -318,12 +318,15 @@ def create_user(request):
 
 @api_view(["GET"])
 def existing_user(request, email):
-    try:
-        User.objects.get(email=email)
-        return Response({"exists": True}, status=status.HTTP_200_OK)
-    except User.DoesNotExist:
-        return Response({"exists": False}, status=status.HTTP_404_NOT_FOUND)
-
+    user_exists = User.objects.filter(email=email).exists()
+    
+    return Response(
+        {
+            "user_email": email, 
+            "exists": user_exists
+        }, 
+        status=status.HTTP_200_OK
+    )
 
 @api_view(['GET'])
 def get_orders(request):
@@ -413,13 +416,17 @@ def get_cart_stat(request):
     return Response({"error": "Cart not found."}, status=status.HTTP_404_NOT_FOUND)
 
 @api_view(["GET"])
-def check_cart_existence(request,cart_code):
-    cart = Cart.objects.filter(cart_code=cart_code).first()
-
-    if cart:
-        return Response({"cart_code":cart_code,"cart_existence":"cart_exists"})
-
-    return Response({"cart_code":cart_code,"cart_existence":"cart_does_not_exist"})
+def check_cart_existence(request, cart_code):
+    # .exists() is significantly faster at the database level than .first()
+    cart_exists = Cart.objects.filter(cart_code=cart_code).exists()
+    
+    return Response(
+        {
+            "cart_code": cart_code, 
+            "exists": cart_exists
+        }, 
+        status=status.HTTP_200_OK
+    )
 
 
 
