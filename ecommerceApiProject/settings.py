@@ -32,7 +32,7 @@ SECRET_KEY = 'django-insecure-yh9y&8b8e280zd)@40jburrr8zo(!r$!tqs7tep(gu&76gdt$i
 DEBUG = True
 
 CSRF_TRUSTED_ORIGINS=[
-                        "https://invigorating-communication-production.up.railway.app"
+                        "https://ecommerceapibackend-production.up.railway.app"
                       ]
 
 ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', 'localhost,127.0.0.1').split(',') + ['.railway.app']
