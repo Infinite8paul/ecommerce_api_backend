@@ -162,7 +162,7 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATIC_ROOT = BASE_DIR / "staticfiles"
-MEDIA_URL = 'img/'
+MEDIA_URL = '/midea/'
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 #local
 #MEDIA_ROOT = BASE_DIR/'media'
