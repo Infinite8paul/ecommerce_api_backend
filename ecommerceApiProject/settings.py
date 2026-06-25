@@ -32,7 +32,8 @@ SECRET_KEY = 'django-insecure-yh9y&8b8e280zd)@40jburrr8zo(!r$!tqs7tep(gu&76gdt$i
 DEBUG = True
 
 CSRF_TRUSTED_ORIGINS=[
-                        "https://ecommerceapibackend-production.up.railway.app"
+                        "https://ecommerceapibackend-production.up.railway.app",
+                        "https://themadmonkey.up.railway.app"
                       ]
 
 ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', 'localhost,127.0.0.1').split(',') + ['.railway.app']
@@ -67,6 +68,7 @@ CORS_ALLOWED_ORIGINS = [
 "http://localhost:3000",
 "http://localhost:8080",
 "http://127.0.0.1:8008",
+"https://themadmonkey.up.railway.app",
 "https://digitalshop-frontend.vercel.app"
 ]
 
