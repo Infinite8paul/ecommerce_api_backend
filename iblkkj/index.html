@@ -1,0 +1,1869 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Mad Monkey | Wines &amp; Spirits · Nairobi</title>
+<meta name="description" content="The Mad Monkey — Nairobi's premier wines & spirits shop, bar and lounge. Over 500 labels, same-day delivery across Nairobi. Mad Fun · Mad Vibes · Mad Riddims.">
+<meta property="og:title" content="The Mad Monkey | Wines & Spirits · Nairobi">
+<meta property="og:description" content="Nairobi's wildest pour. 500+ labels, same-day delivery, bar & lounge. Come for the drinks, stay for the riddims.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#0A0A0A">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--black:#0A0A0A;--dark:#141414;--sf:#1C1C1C;--sf2:#252525;--teal:#4DD9C8;--mag:#E8194B;--gold:#F5C435;--white:#F0EDE8;--gr:#7A7A7A;--grd:#2A2A2A;--nh:70px;--ease:cubic-bezier(0.16,1,0.3,1)}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{font-size:16px;scroll-behavior:smooth}
+body{background:var(--black);color:var(--white);font-family:'DM Sans',sans-serif;line-height:1.6;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+button{cursor:pointer;border:none;background:none;font-family:inherit;color:inherit}
+ul{list-style:none}
+img{display:block;max-width:100%}
+
+/* WRAP */
+.w{max-width:1320px;margin:0 auto;padding:0 clamp(1rem,4vw,3rem)}
+.sec{padding-top:clamp(4rem,8vw,7rem);padding-bottom:clamp(4rem,8vw,7rem)}
+
+/* INK SPLATTER */
+.ink{position:absolute;pointer-events:none;opacity:0;will-change:transform,opacity}
+.ink.go{animation:ink-in .9s var(--ease) forwards}
+#ink1.go{animation:ink-in .9s var(--ease) forwards,drift1 11s ease-in-out .9s infinite}
+#ink2.go{animation:ink-in .9s var(--ease) forwards,drift2 13s ease-in-out .9s infinite}
+#ink3.go{animation:ink-in .9s var(--ease) forwards,drift3 8s ease-in-out .9s infinite}
+@keyframes ink-in{0%{transform:scale(0) rotate(-25deg);opacity:0}65%{opacity:1}100%{transform:scale(1) rotate(0deg);opacity:.55}}
+@keyframes drift1{0%,100%{transform:translate(0,0) scale(1) rotate(0deg);opacity:.52}20%{transform:translate(18px,-28px) scale(1.06) rotate(4deg);opacity:.62}50%{transform:translate(-14px,16px) scale(.96) rotate(-3deg);opacity:.48}75%{transform:translate(22px,10px) scale(1.04) rotate(5deg);opacity:.58}}
+@keyframes drift2{0%,100%{transform:translate(0,0) scale(1) rotate(0deg);opacity:.52}25%{transform:translate(-22px,18px) scale(1.07) rotate(-5deg);opacity:.6}55%{transform:translate(16px,-20px) scale(.95) rotate(3deg);opacity:.46}80%{transform:translate(-10px,24px) scale(1.03) rotate(-4deg);opacity:.56}}
+@keyframes drift3{0%,100%{transform:translate(0,0) scale(1) rotate(0deg);opacity:.3}35%{transform:translate(12px,20px) scale(1.1) rotate(7deg);opacity:.38}70%{transform:translate(-18px,-12px) scale(.93) rotate(-5deg);opacity:.26}}
+
+/* PROMO */
+.promo{background:var(--mag);text-align:center;padding:.55rem;font-family:'Space Mono',monospace;font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;position:relative;z-index:900}
+
+/* NAV */
+.nav{position:fixed;top:0;left:0;right:0;height:var(--nh);background:rgba(10,10,10,.95);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-bottom:1px solid rgba(77,217,200,.12);z-index:1000;display:flex;align-items:center}
+.nav-in{width:100%;display:flex;align-items:center;justify-content:space-between}
+.nav-logo{display:flex;align-items:center;gap:.75rem;cursor:pointer}
+.nav-mark{width:42px;height:42px;border-radius:50%;border:2px solid var(--teal);overflow:hidden;flex-shrink:0;background:var(--sf);display:flex;align-items:center;justify-content:center}
+.nav-mark img{width:100%;height:100%;object-fit:cover}
+.nav-mark-fb{font-family:'Bebas Neue',sans-serif;font-size:1rem;color:var(--teal)}
+.nav-name{font-family:'Bebas Neue',sans-serif;font-size:1.28rem;letter-spacing:.06em;line-height:1}
+.nav-name em{font-style:normal;color:var(--teal)}
+.nav-links{display:flex;align-items:center;gap:1.75rem}
+.nl{font-family:'Space Mono',monospace;font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gr);transition:color .2s;position:relative;padding-bottom:2px;cursor:pointer}
+.nl::after{content:'';position:absolute;bottom:-2px;left:0;width:0;height:2px;background:var(--teal);transition:width .3s var(--ease)}
+.nl:hover,.nl.on{color:var(--white)}
+.nl:hover::after,.nl.on::after{width:100%}
+.nav-right{display:flex;align-items:center;gap:.5rem}
+.nav-cart{position:relative;width:40px;height:40px;display:flex;align-items:center;justify-content:center;color:var(--white);transition:color .2s}
+.nav-cart:hover{color:var(--teal)}
+.nav-cart svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.nav-badge{position:absolute;top:2px;right:2px;min-width:17px;height:17px;background:var(--mag);border-radius:9px;font-family:'Space Mono',monospace;font-size:.56rem;display:flex;align-items:center;justify-content:center;transform:scale(0);transition:transform .3s var(--ease);padding:0 4px}
+.nav-badge.on{transform:scale(1)}
+.nav-ham{display:none;width:40px;height:40px;flex-direction:column;align-items:center;justify-content:center;gap:5px}
+.nav-ham span{display:block;width:22px;height:2px;background:var(--white);transition:all .3s;border-radius:1px}
+
+/* PAGES */
+.page{display:none}
+.page.on{display:block}
+.page-sub{padding-top:var(--nh)}
+
+/* HERO */
+.hero{min-height:100svh;position:relative;display:flex;align-items:center;overflow:hidden;padding-top:var(--nh)}
+.hero-glow{position:absolute;inset:0;background:radial-gradient(ellipse 70% 70% at 65% 45%,rgba(77,217,200,.05) 0%,transparent 65%),radial-gradient(ellipse 50% 60% at 15% 75%,rgba(232,25,75,.07) 0%,transparent 60%);pointer-events:none}
+.hero-content{position:relative;z-index:1;padding:5rem 0 4rem;max-width:680px}
+.hero-eye{font-family:'Space Mono',monospace;font-size:.68rem;letter-spacing:.25em;text-transform:uppercase;color:var(--teal);margin-bottom:1.25rem;display:flex;align-items:center;gap:.75rem}
+.hero-eye::before{content:'';display:block;width:32px;height:1px;background:var(--teal)}
+.hero-hl{font-family:'Bebas Neue',sans-serif;font-size:clamp(5.5rem,15vw,12rem);line-height:.88;letter-spacing:.01em;margin-bottom:1.25rem}
+.hero-hl .t{color:var(--teal)}
+.hero-hl .m{color:var(--mag)}
+.hero-tag{font-family:'Space Mono',monospace;font-size:.7rem;letter-spacing:.28em;text-transform:uppercase;color:var(--gr);margin-bottom:2.5rem}
+.hero-tag b{color:var(--teal);font-weight:400}
+.hero-ctas{display:flex;gap:1rem;flex-wrap:wrap}
+.hero-mascot{position:absolute;right:-6%;top:50%;transform:translateY(-50%);width:70%;pointer-events:none;z-index:0}
+.mascot-wrap{position:relative;width:100%;animation:float 4s ease-in-out infinite}
+.hero-mascot img{width:100%;height:auto;display:block;opacity:.88;filter:saturate(1.8) brightness(1.2) contrast(1.05);-webkit-mask-image:radial-gradient(ellipse 82% 74% at 53% 52%,#000 38%,transparent 80%);mask-image:radial-gradient(ellipse 82% 74% at 53% 52%,#000 38%,transparent 80%)}
+.eyelid{position:absolute;border-radius:0 0 55% 55%;background:#20100a;transform:scaleY(0);transform-origin:top center;pointer-events:none;z-index:3}
+#eyelid-l{left:35%;top:43%;width:16%;height:11%;animation:blink 4.5s ease-in-out 0.5s infinite}
+#eyelid-r{left:46%;top:42%;width:16%;height:11%;animation:blink 4.5s ease-in-out 0.56s infinite}
+@keyframes blink{0%,84%,100%{transform:scaleY(0)}88%,94%{transform:scaleY(1)}}
+.hero-mascot-ghost{width:100%;height:100%;display:flex;align-items:center;justify-content:center;opacity:.2;animation:float 4s ease-in-out infinite}
+.hero-mascot-ghost svg{width:min(420px,80%);height:auto;filter:drop-shadow(0 0 60px rgba(77,217,200,.3))}
+@keyframes float{0%,100%{transform:translateY(0px)}50%{transform:translateY(-16px)}}
+
+/* BTNS */
+.btn{display:inline-flex;align-items:center;gap:.5rem;font-family:'Space Mono',monospace;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;padding:.85rem 1.85rem;border-radius:3px;transition:all .25s var(--ease);white-space:nowrap;cursor:pointer}
+.btn-p{background:var(--teal);color:var(--black);border:1px solid var(--teal)}
+.btn-p:hover{background:#fff;border-color:#fff;transform:translateY(-2px);box-shadow:0 8px 20px rgba(77,217,200,.2)}
+.btn-o{border:1px solid rgba(240,237,232,.22);color:var(--white)}
+.btn-o:hover{border-color:var(--teal);color:var(--teal);transform:translateY(-2px)}
+.btn-d{background:var(--mag);color:#fff;border:1px solid var(--mag)}
+.btn-d:hover{background:#c4143f;border-color:#c4143f;transform:translateY(-2px)}
+.btn-fw{width:100%;justify-content:center}
+
+/* STATS */
+.stats{background:var(--sf);border-top:1px solid var(--grd);border-bottom:1px solid var(--grd);padding:1.1rem 0}
+.stats-in{display:flex;justify-content:center;gap:clamp(2rem,6vw,5rem);flex-wrap:wrap}
+.si{display:flex;align-items:center;gap:.6rem;font-family:'Space Mono',monospace;font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gr)}
+.si span{color:var(--teal);font-size:.95rem}
+
+/* SH */
+.sh{display:flex;align-items:flex-end;justify-content:space-between;gap:1rem;margin-bottom:2.5rem;flex-wrap:wrap}
+.sh-eye{font-family:'Space Mono',monospace;font-size:.64rem;letter-spacing:.2em;text-transform:uppercase;color:var(--teal);margin-bottom:.5rem}
+.sh-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(2.2rem,5vw,3.8rem);line-height:.95}
+
+/* PRODUCT GRID */
+.pgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:1.25rem}
+
+/* PRODUCT CARD */
+.pc{background:var(--sf);border-radius:10px;overflow:hidden;border:1px solid transparent;transition:border-color .3s,transform .3s var(--ease),box-shadow .3s}
+.pc:hover{border-color:rgba(77,217,200,.25);transform:translateY(-5px);box-shadow:0 20px 50px rgba(0,0,0,.45)}
+.pc-img{aspect-ratio:3/4;background:var(--sf2);position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.pc-img img.blend-multiply{mix-blend-mode:multiply}
+.pc-badge{position:absolute;top:.75rem;left:.75rem;font-family:'Space Mono',monospace;font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;padding:.22rem .55rem;border-radius:2px;z-index:1}
+.pc-badge-new{background:var(--teal);color:var(--black)}
+.pc-badge-sale{background:var(--mag);color:#fff}
+.pc-body{padding:1.1rem}
+.pc-cat{font-family:'Space Mono',monospace;font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);margin-bottom:.35rem}
+.pc-name{font-weight:600;font-size:.93rem;line-height:1.3;margin-bottom:.2rem}
+.pc-origin{font-size:.76rem;color:var(--gr);margin-bottom:.9rem}
+.pc-foot{display:flex;align-items:center;justify-content:space-between}
+.pc-price{font-family:'Space Mono',monospace;font-weight:700;font-size:.98rem}
+.pc-price small{font-size:.58rem;color:var(--gr);font-weight:400;display:block}
+.pc-add{width:38px;height:38px;border-radius:50%;background:var(--teal);color:var(--black);display:flex;align-items:center;justify-content:center;font-size:1.25rem;font-weight:700;transition:all .25s var(--ease);flex-shrink:0;line-height:1}
+.pc-add:hover{background:#fff;transform:scale(1.12)}
+.pc-add.pop{background:var(--mag);color:#fff;animation:pop .35s var(--ease)}
+@keyframes pop{0%{transform:scale(1)}50%{transform:scale(1.35)}100%{transform:scale(1)}}
+
+/* TRIO */
+.trio{background:var(--dark)}
+.trio-grid{display:grid;grid-template-columns:repeat(3,1fr)}
+.ti{padding:3rem 2.5rem;border-right:1px solid var(--grd);position:relative;overflow:hidden;transition:background .3s;cursor:pointer}
+.ti:last-child{border-right:none}
+.ti:hover{background:var(--sf)}
+.ti-num{font-family:'Bebas Neue',sans-serif;font-size:6rem;color:rgba(77,217,200,.07);line-height:1;margin-bottom:.75rem;transition:color .3s}
+.ti:hover .ti-num{color:rgba(77,217,200,.14)}
+.ti-title{font-family:'Bebas Neue',sans-serif;font-size:2rem;margin-bottom:.75rem}
+.ti-desc{font-size:.87rem;color:var(--gr);line-height:1.75;margin-bottom:1.5rem}
+.ti-cta{font-family:'Space Mono',monospace;font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);display:inline-flex;align-items:center;gap:.5rem;transition:gap .2s}
+.ti:hover .ti-cta{gap:.8rem}
+
+/* VIBE */
+.vibe{position:relative;overflow:hidden;background:var(--sf);padding:6rem 0;text-align:center}
+.vibe-glow{position:absolute;inset:0;background:radial-gradient(ellipse 80% 100% at 50% 50%,rgba(232,25,75,.1) 0%,transparent 65%);pointer-events:none}
+.vibe-in{position:relative;z-index:1}
+.vibe-hl{font-family:'Bebas Neue',sans-serif;font-size:clamp(3rem,8vw,6rem);line-height:.92;margin-bottom:1.25rem}
+.vibe-hl .t{color:var(--teal)}
+.vibe-sub{font-size:.93rem;color:var(--gr);max-width:440px;margin:0 auto 2.5rem;line-height:1.8}
+
+/* SHOP */
+.shop-top{padding:3rem 0 2rem;border-bottom:1px solid var(--grd)}
+.shop-top-row{display:flex;align-items:center;justify-content:space-between;margin-bottom:1.5rem;flex-wrap:wrap;gap:1rem}
+.shop-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(2.5rem,6vw,5rem);line-height:1}
+.filters{display:flex;gap:.45rem;flex-wrap:wrap}
+.fb{font-family:'Space Mono',monospace;font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;padding:.44rem .88rem;border:1px solid var(--grd);border-radius:100px;color:var(--gr);transition:all .2s;cursor:pointer}
+.fb:hover{border-color:var(--teal);color:var(--teal)}
+.fb.on{background:var(--teal);border-color:var(--teal);color:var(--black)}
+.count-lbl{font-family:'Space Mono',monospace;font-size:.66rem;color:var(--gr);letter-spacing:.08em;margin-bottom:2rem}
+
+/* CART */
+.cart-ov{position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:1100;opacity:0;pointer-events:none;transition:opacity .3s}
+.cart-ov.on{opacity:1;pointer-events:all}
+.cart-dr{position:fixed;top:0;right:0;width:min(440px,100vw);height:100%;background:var(--dark);border-left:1px solid var(--grd);z-index:1200;transform:translateX(100%);transition:transform .4s var(--ease);display:flex;flex-direction:column}
+.cart-dr.on{transform:translateX(0)}
+.cart-hd{padding:1.5rem 1.75rem;border-bottom:1px solid var(--grd);display:flex;align-items:center;justify-content:space-between;flex-shrink:0}
+.cart-hd-title{font-family:'Bebas Neue',sans-serif;font-size:1.6rem}
+.x-btn{width:34px;height:34px;border:1px solid var(--grd);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.2rem;line-height:1;color:var(--white);transition:all .2s}
+.x-btn:hover{border-color:var(--mag);color:var(--mag)}
+.cart-body{flex:1;overflow-y:auto;padding:1.5rem 1.75rem}
+.cart-empty{text-align:center;padding:4rem 0;color:var(--gr)}
+.cart-empty-icon{font-size:3rem;margin-bottom:1rem;opacity:.4}
+.citem{display:flex;gap:1rem;padding:1rem 0;border-bottom:1px solid var(--grd)}
+.ci-img{width:60px;height:76px;background:var(--sf);border-radius:5px;display:flex;align-items:center;justify-content:center;flex-shrink:0;overflow:hidden}
+.ci-info{flex:1;min-width:0}
+.ci-name{font-weight:600;font-size:.87rem;margin-bottom:.18rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ci-cat{font-family:'Space Mono',monospace;font-size:.58rem;color:var(--teal);text-transform:uppercase;letter-spacing:.1em;margin-bottom:.6rem}
+.ci-ctrl{display:flex;align-items:center;gap:.6rem}
+.qb{width:26px;height:26px;border:1px solid var(--grd);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.95rem;line-height:1;color:var(--white);transition:all .2s}
+.qb:hover{border-color:var(--teal);color:var(--teal)}
+.qv{font-family:'Space Mono',monospace;font-size:.88rem;min-width:18px;text-align:center}
+.ci-right{display:flex;flex-direction:column;align-items:flex-end;justify-content:space-between;gap:.5rem;flex-shrink:0}
+.ci-price{font-family:'Space Mono',monospace;font-size:.9rem;font-weight:700;white-space:nowrap}
+.ci-del{background:none;border:1px solid var(--grd);color:var(--gr);width:26px;height:26px;border-radius:50%;font-size:.62rem;cursor:pointer;transition:border-color .2s,color .2s;display:flex;align-items:center;justify-content:center;padding:0}
+.ci-del:hover{border-color:var(--mag);color:var(--mag)}
+.cart-ft{padding:1.5rem 1.75rem;border-top:1px solid var(--grd);flex-shrink:0}
+.cart-tot-row{display:flex;justify-content:space-between;align-items:center;margin-bottom:1.1rem}
+.cart-tot-lbl{font-family:'Space Mono',monospace;font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gr)}
+.cart-tot-val{font-family:'Space Mono',monospace;font-size:1.35rem;font-weight:700;color:var(--teal)}
+
+/* AGE GATE */
+.age-ov{position:fixed;inset:0;background:rgba(0,0,0,.93);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);z-index:2000;display:flex;align-items:center;justify-content:center;padding:1rem;opacity:0;pointer-events:none;transition:opacity .3s}
+.age-ov.on{opacity:1;pointer-events:all}
+.age-box{background:var(--sf);border:1px solid var(--grd);border-radius:12px;max-width:460px;width:100%;padding:3rem 2.5rem;text-align:center;position:relative;overflow:hidden;transform:scale(.88);transition:transform .4s var(--ease)}
+.age-ov.on .age-box{transform:scale(1)}
+.age-ink{position:absolute;top:-30px;right:-30px;width:140px;height:140px;color:var(--mag);opacity:.12;pointer-events:none}
+.age-icon{font-size:2.5rem;margin-bottom:.75rem}
+.age-title{font-family:'Bebas Neue',sans-serif;font-size:2.8rem;margin-bottom:.6rem}
+.age-sub{font-size:.88rem;color:var(--gr);margin-bottom:.4rem;line-height:1.65}
+.age-notice{font-family:'Space Mono',monospace;font-size:.66rem;color:var(--teal);letter-spacing:.1em;text-transform:uppercase;margin-bottom:2.5rem}
+.age-btns{display:flex;gap:.75rem}
+.age-btns .btn{flex:1;justify-content:center}
+.age-legal{font-size:.66rem;color:var(--gr);margin-top:1.5rem;line-height:1.7}
+
+/* CHECKOUT */
+.co-ov{position:fixed;inset:0;background:rgba(0,0,0,.9);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);z-index:1500;display:flex;align-items:flex-start;justify-content:center;padding:2rem 1rem;overflow-y:auto;opacity:0;pointer-events:none;transition:opacity .3s}
+.co-ov.on{opacity:1;pointer-events:all}
+.co-box{background:var(--dark);border:1px solid var(--grd);border-radius:12px;max-width:580px;width:100%;overflow:hidden;margin:auto;transform:translateY(24px);transition:transform .4s var(--ease)}
+.co-ov.on .co-box{transform:translateY(0)}
+.co-hd{padding:1.75rem 2.25rem;border-bottom:1px solid var(--grd);display:flex;align-items:center;justify-content:space-between}
+.co-title{font-family:'Bebas Neue',sans-serif;font-size:2rem}
+.co-body{padding:2rem 2.25rem}
+.co-st{font-family:'Bebas Neue',sans-serif;font-size:1.2rem;color:var(--teal);margin-bottom:1.1rem}
+.co-div{height:1px;background:var(--grd);margin:1.5rem 0}
+.fr2{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.fg{margin-bottom:1.1rem}
+.fg label{display:block;font-family:'Space Mono',monospace;font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gr);margin-bottom:.44rem}
+.fg input,.fg select,.fg textarea{width:100%;background:var(--sf);border:1px solid var(--grd);border-radius:4px;padding:.7rem .9rem;color:var(--white);font-family:'DM Sans',sans-serif;font-size:.9rem;transition:border-color .2s;outline:none}
+.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--teal)}
+.fg textarea{resize:vertical;min-height:75px}
+.fg select{appearance:none;cursor:pointer}
+.co-sum{background:var(--sf);border-radius:6px;padding:1.1rem;margin-bottom:1.25rem}
+.co-row{display:flex;justify-content:space-between;font-size:.84rem;margin-bottom:.44rem}
+.co-row-tot{margin-bottom:0;font-family:'Space Mono',monospace;font-weight:700;color:var(--teal);padding-top:.6rem;border-top:1px solid var(--grd);font-size:.94rem}
+.co-ft{padding:1.25rem 2.25rem 2rem;border-top:1px solid var(--grd);display:flex;gap:.75rem}
+.co-success{text-align:center;padding:3rem 2.5rem;display:none}
+.co-success.on{display:block}
+.co-s-icon{font-size:4rem;margin-bottom:.75rem}
+.co-s-title{font-family:'Bebas Neue',sans-serif;font-size:2.8rem;color:var(--teal);margin-bottom:.75rem}
+.co-s-sub{font-size:.88rem;color:var(--gr);line-height:1.75}
+
+/* BAR PAGE */
+.bar-top{padding:3rem 0 2rem;position:relative;overflow:hidden}
+.bar-glow{position:absolute;inset:0;background:radial-gradient(ellipse 55% 70% at 75% 50%,rgba(232,25,75,.07) 0%,transparent 65%);pointer-events:none}
+.hrow{display:flex;justify-content:space-between;align-items:center;padding:.65rem 0;border-bottom:1px solid var(--grd)}
+.hrow-day{font-family:'Space Mono',monospace;font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gr)}
+.hrow-time{font-family:'Space Mono',monospace;font-size:.7rem;color:var(--teal)}
+.menu-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:1.5rem}
+.mc{background:var(--sf);border-radius:10px;overflow:hidden}
+.mc-hd{padding:1.1rem 1.4rem;background:var(--sf2);border-bottom:1px solid var(--grd);display:flex;align-items:center;gap:.6rem}
+.mc-icon{font-size:1.1rem}
+.mc-name{font-family:'Bebas Neue',sans-serif;font-size:1.2rem}
+.mi{display:flex;justify-content:space-between;align-items:flex-start;padding:.7rem 1.4rem;gap:1rem}
+.mi-name{font-size:.87rem;font-weight:500}
+.mi-desc{font-size:.72rem;color:var(--gr);margin-top:.15rem}
+.mi-price{font-family:'Space Mono',monospace;font-size:.8rem;color:var(--gold);white-space:nowrap;flex-shrink:0}
+.ev-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:1.25rem}
+.ev{background:var(--sf);border-radius:10px;overflow:hidden;border:1px solid var(--grd)}
+.ev-date{background:var(--teal);color:var(--black);padding:.55rem 1.4rem;font-family:'Space Mono',monospace;font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+.ev-body{padding:1.4rem}
+.ev-title{font-family:'Bebas Neue',sans-serif;font-size:1.5rem;margin-bottom:.45rem}
+.ev-desc{font-size:.82rem;color:var(--gr);line-height:1.65}
+
+/* DELIVERY */
+.steps-g{display:grid;grid-template-columns:repeat(3,1fr);background:var(--sf);border-radius:10px;overflow:hidden;margin-bottom:4rem}
+.step{padding:2.5rem 2rem;border-right:1px solid var(--grd)}
+.step:last-child{border-right:none}
+.step-n{font-family:'Bebas Neue',sans-serif;font-size:5rem;color:rgba(77,217,200,.12);line-height:1;margin-bottom:.75rem}
+.step-t{font-family:'Bebas Neue',sans-serif;font-size:1.6rem;margin-bottom:.65rem}
+.step-d{font-size:.87rem;color:var(--gr);line-height:1.75}
+.zones-g{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:1rem}
+.zone{background:var(--sf);border-radius:10px;padding:1.4rem;border:1px solid var(--grd);transition:border-color .3s}
+.zone:hover{border-color:var(--teal)}
+.zone-name{font-weight:600;margin-bottom:.4rem}
+.zone-time{font-family:'Space Mono',monospace;font-size:.68rem;color:var(--teal);margin-bottom:.2rem}
+.zone-fee{font-family:'Space Mono',monospace;font-size:.68rem;color:var(--gold)}
+
+/* ABOUT */
+.about-g{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
+.about-img{aspect-ratio:4/5;background:var(--sf);border-radius:10px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.about-glow{position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(77,217,200,.07) 0%,transparent 70%)}
+.about-img svg{width:55%;opacity:.18;position:relative;z-index:1}
+.ci-label{font-family:'Space Mono',monospace;font-size:.6rem;letter-spacing:.15em;text-transform:uppercase;color:var(--teal);margin-bottom:.4rem}
+.ci-val{font-size:.93rem;color:var(--white);line-height:1.6}
+.cinfo{margin-bottom:1.4rem}
+.soc-row{display:flex;gap:.6rem;flex-wrap:wrap;margin-top:1.5rem}
+.soc-pill{padding:.5rem 1.1rem;border:1px solid var(--grd);border-radius:100px;font-family:'Space Mono',monospace;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gr);transition:all .2s;cursor:pointer}
+.soc-pill:hover{border-color:var(--teal);color:var(--teal)}
+
+/* FOOTER */
+.footer{background:var(--dark);border-top:1px solid var(--grd);padding:4rem 0 2rem}
+.footer-g{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;margin-bottom:3rem}
+.footer-brand{font-family:'Bebas Neue',sans-serif;font-size:2rem;margin-bottom:.65rem}
+.footer-brand em{font-style:normal;color:var(--teal)}
+.footer-sub{font-size:.83rem;color:var(--gr);line-height:1.7;max-width:230px;margin-bottom:1.25rem}
+.footer-ct{font-family:'Space Mono',monospace;font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);margin-bottom:.85rem}
+.footer-links{display:flex;flex-direction:column;gap:.5rem}
+.footer-lnk{font-size:.83rem;color:var(--gr);transition:color .2s;cursor:pointer}
+.footer-lnk:hover{color:var(--white)}
+.footer-bot{border-top:1px solid var(--grd);padding-top:1.4rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+.footer-cr{font-family:'Space Mono',monospace;font-size:.6rem;color:var(--gr);letter-spacing:.08em}
+
+/* REVEAL */
+.rv{opacity:0;transform:translateY(28px);transition:opacity .65s var(--ease),transform .65s var(--ease)}
+.rv.on{opacity:1;transform:translateY(0)}
+.rv.d1{transition-delay:.1s}.rv.d2{transition-delay:.2s}.rv.d3{transition-delay:.3s}.rv.d4{transition-delay:.4s}
+
+/* TOAST */
+.toast{position:fixed;bottom:2rem;left:50%;transform:translateX(-50%) translateY(80px);background:var(--teal);color:var(--black);font-family:'Space Mono',monospace;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;padding:.7rem 1.4rem;border-radius:100px;z-index:3000;transition:transform .4s var(--ease);white-space:nowrap;pointer-events:none}
+.toast.on{transform:translateX(-50%) translateY(0)}
+
+/* SEARCH */
+.nav-srch{width:40px;height:40px;display:flex;align-items:center;justify-content:center;color:var(--white);transition:color .2s}
+.nav-srch:hover{color:var(--teal)}
+.nav-srch svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round}
+.srch-ov{position:fixed;inset:0;background:rgba(0,0,0,.88);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);z-index:1400;opacity:0;pointer-events:none;transition:opacity .3s;display:flex;align-items:flex-start;justify-content:center;padding:clamp(4rem,10vh,7rem) 1rem 2rem}
+.srch-ov.on{opacity:1;pointer-events:all}
+.srch-box{width:100%;max-width:660px;background:var(--dark);border:1px solid var(--grd);border-radius:12px;overflow:hidden;transform:translateY(-16px);transition:transform .35s var(--ease)}
+.srch-ov.on .srch-box{transform:translateY(0)}
+.srch-top{display:flex;align-items:center;gap:.75rem;padding:.9rem 1.25rem;border-bottom:1px solid var(--grd)}
+.srch-top svg{width:18px;height:18px;fill:none;stroke:var(--gr);stroke-width:1.8;stroke-linecap:round;flex-shrink:0}
+#srch-input{flex:1;background:none;border:none;outline:none;font-family:'DM Sans',sans-serif;font-size:1rem;color:var(--white);caret-color:var(--teal)}
+#srch-input::placeholder{color:var(--gr)}
+.srch-results{max-height:62vh;overflow-y:auto;padding:1.25rem}
+.srch-hint{text-align:center;padding:2rem;color:var(--gr);font-size:.88rem;line-height:1.7}
+.srch-loading{text-align:center;padding:2rem;color:var(--gr);font-family:'Space Mono',monospace;font-size:.64rem;letter-spacing:.12em;text-transform:uppercase}
+.srch-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:1rem}
+.srch-none{text-align:center;padding:2.5rem 1rem;color:var(--gr);font-size:.88rem}
+/* Loading skeleton */
+.pc-skeleton{background:var(--sf);border-radius:10px;overflow:hidden;border:1px solid var(--grd)}
+.pc-skeleton .sk-img{aspect-ratio:3/4;background:linear-gradient(90deg,var(--sf) 25%,var(--sf2) 50%,var(--sf) 75%);background-size:200% 100%;animation:shimmer 1.4s infinite}
+.pc-skeleton .sk-line{height:10px;border-radius:4px;background:linear-gradient(90deg,var(--sf) 25%,var(--sf2) 50%,var(--sf) 75%);background-size:200% 100%;animation:shimmer 1.4s infinite;margin:.75rem .75rem .4rem}
+.pc-skeleton .sk-line.short{width:55%;margin-top:.3rem}
+@keyframes shimmer{0%{background-position:200% 0}100%{background-position:-200% 0}}
+
+/* MOBILE NAV */
+.mob-ov{position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:1250;opacity:0;pointer-events:none;transition:opacity .3s}
+.mob-ov.on{opacity:1;pointer-events:all}
+.mob-nav{position:fixed;top:0;left:0;width:280px;height:100%;background:var(--dark);border-right:1px solid var(--grd);z-index:1300;transform:translateX(-100%);transition:transform .4s var(--ease);padding:5rem 2rem 2rem;display:flex;flex-direction:column}
+.mob-nav.on{transform:translateX(0)}
+.mob-close{position:absolute;top:1rem;right:1rem;width:38px;height:38px;border:1px solid var(--grd);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.1rem;color:var(--white);transition:all .2s}
+.mob-close:hover{border-color:var(--mag);color:var(--mag)}
+.mob-links{display:flex;flex-direction:column}
+.mob-lnk{font-family:'Bebas Neue',sans-serif;font-size:2.2rem;padding:.45rem 0;border-bottom:1px solid var(--grd);transition:color .2s;cursor:pointer}
+.mob-lnk:hover,.mob-lnk.on{color:var(--teal)}
+
+@media(max-width:1024px){.footer-g{grid-template-columns:1fr 1fr;gap:2rem}}
+@media(max-width:768px){
+  .nav-links{display:none}.nav-ham{display:flex}
+  .hero-mascot{display:none}
+  .hero-hl{font-size:clamp(4.5rem,22vw,7rem)}
+  .trio-grid{grid-template-columns:1fr}
+  .ti{border-right:none;border-bottom:1px solid var(--grd)}
+  .ti:last-child{border-bottom:none}
+  .steps-g{grid-template-columns:1fr}
+  .step{border-right:none;border-bottom:1px solid var(--grd)}
+  .step:last-child{border-bottom:none}
+  .about-g{grid-template-columns:1fr;gap:2rem}
+  .about-img{display:none}
+  .footer-g{grid-template-columns:1fr;gap:1.75rem}
+  .fr2{grid-template-columns:1fr}
+  .co-body{padding:1.5rem}
+  .co-ft{padding:1rem 1.5rem 1.5rem}
+  .co-hd{padding:1.25rem 1.5rem}
+}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms !important;transition-duration:.01ms !important}}
+
+/* ===== POLISH & MICRO-INTERACTIONS ===== */
+
+/* Focus visible */
+:focus-visible{outline:2px solid var(--teal);outline-offset:3px;border-radius:2px}
+button:focus-visible,a:focus-visible{outline:2px solid var(--teal);outline-offset:3px;border-radius:2px}
+
+/* Scroll progress */
+#scroll-prog{position:fixed;top:0;left:0;height:2px;background:linear-gradient(90deg,var(--teal),var(--mag));width:0%;z-index:2001;pointer-events:none}
+
+/* Custom cursor — desktop only */
+#cur-dot{position:fixed;width:5px;height:5px;background:var(--teal);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:background .15s,width .2s,height .2s}
+#cur-ring{position:fixed;width:30px;height:30px;border:1.5px solid rgba(77,217,200,.4);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:width .28s var(--ease),height .28s var(--ease),border-color .25s,opacity .3s}
+#cur-dot.hov{background:var(--mag);width:8px;height:8px}
+#cur-ring.hov{width:46px;height:46px;border-color:rgba(232,25,75,.3)}
+@media(pointer:coarse){#cur-dot,#cur-ring{display:none}}
+
+/* Nav scroll state */
+.nav{transition:background .4s,border-color .4s}
+.nav.scrolled{background:rgba(10,10,10,.99);border-bottom-color:rgba(77,217,200,.22)}
+
+/* Nav hover letter-spacing */
+.nl{transition:color .2s,letter-spacing .35s var(--ease) !important}
+.nl:hover,.nl.on{letter-spacing:.22em !important}
+
+/* Ripple */
+.btn{position:relative;overflow:hidden}
+.rpl{position:absolute;border-radius:50%;background:rgba(255,255,255,.2);transform:scale(0);animation:rpl-out .55s ease-out forwards;pointer-events:none}
+@keyframes rpl-out{to{transform:scale(4);opacity:0}}
+
+/* Card shimmer sweep on hover */
+.pc-img::after{content:'';position:absolute;inset:0;background:linear-gradient(110deg,transparent 30%,rgba(255,255,255,.07) 50%,transparent 70%);transform:translateX(-110%);pointer-events:none;transition:none}
+.pc:hover .pc-img::after{transform:translateX(110%);transition:transform .6s ease}
+
+/* Glitch on hero MAD */
+.hero-hl .t{display:inline-block;position:relative}
+.hero-hl .t.glitching::before,.hero-hl .t.glitching::after{content:attr(data-text);position:absolute;left:0;top:0;width:100%;height:100%}
+.hero-hl .t.glitching::before{color:var(--mag);animation:glitch-a .18s steps(2) forwards}
+.hero-hl .t.glitching::after{color:#00f5e9;animation:glitch-b .18s steps(2) forwards}
+@keyframes glitch-a{0%{clip-path:polygon(0 15%,100% 15%,100% 30%,0 30%);transform:translate(-4px)}50%{clip-path:polygon(0 55%,100% 55%,100% 70%,0 70%);transform:translate(4px)}100%{clip-path:polygon(0 80%,100% 80%,100% 95%,0 95%);transform:translate(0)}}
+@keyframes glitch-b{0%{clip-path:polygon(0 65%,100% 65%,100% 80%,0 80%);transform:translate(4px)}50%{clip-path:polygon(0 25%,100% 25%,100% 40%,0 40%);transform:translate(-4px)}100%{clip-path:polygon(0 5%,100% 5%,100% 20%,0 20%);transform:translate(0)}}
+
+/* Stats bar redesign — editorial numbers */
+.stats{padding:2.2rem 0}
+.stats-in{gap:0;justify-content:space-between;flex-wrap:nowrap}
+.si{flex-direction:column;align-items:center;gap:.2rem;flex:1;padding:0 1rem;border-right:1px solid var(--grd);font-family:inherit;font-size:inherit;letter-spacing:0;text-transform:none;color:inherit}
+.si:last-child{border-right:none}
+.si-n{font-family:'Bebas Neue',sans-serif !important;font-size:clamp(1.8rem,4vw,2.6rem) !important;color:var(--white) !important;line-height:1;display:block}
+.si-l{font-family:'Space Mono',monospace;font-size:.55rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gr);display:block;margin-top:.15rem}
+@media(max-width:640px){.stats-in{flex-wrap:wrap;gap:1.5rem;justify-content:center}.si{border-right:none;min-width:80px}}
+
+/* Contrast improvements */
+.ti-desc,.step-d,.ev-desc,.footer-sub,.co-s-sub{color:#999}
+.pc-origin,.hrow-day{color:#8a8a8a}
+.mi-desc{color:#8a8a8a}
+
+/* Mobile hero anchor */
+.hero-mob-anchor{display:none}
+@media(max-width:768px){
+  .hero-mob-anchor{display:flex;align-items:center;gap:.75rem;margin-bottom:1.75rem}
+  .hero-mob-anchor-img{width:52px;height:52px;border-radius:50%;border:2px solid var(--teal);overflow:hidden;flex-shrink:0}
+  .hero-mob-anchor-img img{width:100%;height:100%;object-fit:cover}
+  .hero-mob-anchor-txt{font-family:'Space Mono',monospace;font-size:.58rem;letter-spacing:.2em;text-transform:uppercase;color:var(--teal);line-height:1.7}
+  .hero-content{padding:2rem 0 3rem}
+  .hero-ctas{flex-direction:column}
+  .hero-ctas .btn{justify-content:center}
+}
+
+/* Gold — intentional: premium label on Hennessy card */
+.pc-badge-premium{background:var(--gold);color:var(--black)}
+
+</style>
+</head>
+<body>
+
+<!-- PROMO -->
+<div class="promo">🔥 Free delivery on orders over KES 5,000 within Nairobi — Use code: MADMONKEY</div>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="w nav-in">
+    <div class="nav-logo" onclick="goPage('home')">
+      <div class="nav-mark">
+        <img src="./logo.jpg" alt="The Mad Monkey" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="nav-mark-fb" style="display:none">MM</div>
+      </div>
+      <div class="nav-name">THE <em>MAD</em><br>MONKEY</div>
+    </div>
+    <div class="nav-links">
+      <div class="nl on" onclick="goPage('home')" tabindex="0" role="button" onkeydown="if(event.key==='Enter')goPage('home')">Home</div>
+      <div class="nl" onclick="goPage('shop')" tabindex="0" role="button" onkeydown="if(event.key==='Enter')goPage('shop')">Shop</div>
+      <div class="nl" onclick="goPage('bar')" tabindex="0" role="button" onkeydown="if(event.key==='Enter')goPage('bar')">Bar &amp; Lounge</div>
+      <div class="nl" onclick="goPage('delivery')" tabindex="0" role="button" onkeydown="if(event.key==='Enter')goPage('delivery')">Delivery</div>
+      <div class="nl" onclick="goPage('about')" tabindex="0" role="button" onkeydown="if(event.key==='Enter')goPage('about')">About</div>
+    </div>
+    <div class="nav-right">
+      <button class="nav-srch" onclick="openSearch()" aria-label="Search">
+        <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      </button>
+      <button class="nav-cart" onclick="openCart()" aria-label="Open cart">
+        <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+        <span class="nav-badge" id="cart-badge">0</span>
+      </button>
+      <button class="nav-ham" onclick="openMob()" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- MOBILE NAV -->
+<div class="mob-ov" id="mob-ov" onclick="closeMob()"></div>
+<nav class="mob-nav" id="mob-nav">
+  <button class="mob-close" onclick="closeMob()">✕</button>
+  <div class="mob-links">
+    <div class="mob-lnk on" onclick="goPage('home');closeMob()">Home</div>
+    <div class="mob-lnk" onclick="goPage('shop');closeMob()">Shop</div>
+    <div class="mob-lnk" onclick="goPage('bar');closeMob()">Bar &amp; Lounge</div>
+    <div class="mob-lnk" onclick="goPage('delivery');closeMob()">Delivery</div>
+    <div class="mob-lnk" onclick="goPage('about');closeMob()">About</div>
+  </div>
+</nav>
+
+<!-- ===================== HOME ===================== -->
+<div class="page on" id="page-home">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-glow"></div>
+
+    <!-- INK SPLATTERS -->
+    <div class="ink" id="ink1" style="width:520px;height:520px;top:-120px;right:-80px;color:var(--teal)">
+      <svg viewBox="0 0 200 200" fill="currentColor" opacity=".9"><circle cx="100" cy="100" r="55"/><circle cx="148" cy="62" r="22"/><circle cx="58" cy="152" r="16"/><circle cx="162" cy="145" r="11"/><circle cx="48" cy="65" r="13"/><circle cx="125" cy="172" r="9"/><circle cx="170" cy="95" r="8"/><circle cx="30" cy="115" r="7"/></svg>
+    </div>
+    <div class="ink" id="ink2" style="width:360px;height:360px;bottom:30px;left:-90px;color:var(--mag)">
+      <svg viewBox="0 0 200 200" fill="currentColor" opacity=".9"><circle cx="100" cy="100" r="50"/><circle cx="52" cy="60" r="20"/><circle cx="155" cy="145" r="15"/><circle cx="40" cy="145" r="10"/><circle cx="160" cy="60" r="12"/><circle cx="78" cy="170" r="8"/></svg>
+    </div>
+    <div class="ink" id="ink3" style="width:200px;height:200px;top:38%;right:44%;color:var(--gold);opacity:.3">
+      <svg viewBox="0 0 200 200" fill="currentColor"><circle cx="100" cy="100" r="35"/><circle cx="145" cy="75" r="14"/><circle cx="62" cy="148" r="11"/><circle cx="152" cy="140" r="8"/></svg>
+    </div>
+
+    <!-- MASCOT -->
+    <div class="hero-mascot">
+      <div class="mascot-wrap" id="mascot-wrap">
+        <img src="./logo.jpg" alt="" id="mascot-img" onerror="this.style.display='none';document.getElementById('mascot-ghost').style.display='flex'">
+      </div>
+      <div class="hero-mascot-ghost" id="mascot-ghost" style="display:none">
+        <svg viewBox="0 0 200 220" fill="currentColor" style="color:var(--teal)">
+          <ellipse cx="100" cy="115" rx="55" ry="65"/>
+          <ellipse cx="100" cy="65" rx="42" ry="42"/>
+          <ellipse cx="68" cy="55" rx="12" ry="12"/>
+          <ellipse cx="132" cy="55" rx="12" ry="12"/>
+          <rect x="30" y="90" width="25" height="12" rx="6"/>
+          <rect x="145" y="90" width="25" height="12" rx="6"/>
+          <path d="M80 165 Q100 185 120 165"/>
+        </svg>
+      </div>
+    </div>
+
+    <div class="w" style="position:relative;z-index:1;width:100%">
+      <div class="hero-content">
+        <div class="hero-mob-anchor">
+          <div class="hero-mob-anchor-img"><img src="./logo.jpg" alt="The Mad Monkey"></div>
+          <div class="hero-mob-anchor-txt">Nairobi's Wildest Pour<br>Wines · Spirits · Bar</div>
+        </div>
+        <div class="hero-eye rv">Nairobi's Wildest Pour</div>
+        <div class="hero-hl rv d1">
+          THE<br><span class="t" data-text="MAD">MAD</span><br><span class="m">MONKEY</span>
+        </div>
+        <div class="hero-tag rv d2">
+          <b>Mad Fun</b> · <b>Mad Vibes</b> · <b>Mad Riddims</b>
+        </div>
+        <div class="hero-ctas rv d3">
+          <button class="btn btn-p" onclick="goPage('shop')">Shop Now →</button>
+          <button class="btn btn-o" onclick="goPage('bar')">Explore the Bar</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <div class="stats">
+    <div class="w stats-in">
+      <div class="si"><span class="si-n" data-count="500" data-suffix="+">500+</span><span class="si-l">Labels</span></div>
+      <div class="si"><span class="si-n">7</span><span class="si-l">Days Open</span></div>
+      <div class="si"><span class="si-n">&lt;30</span><span class="si-l">Min Delivery</span></div>
+      <div class="si"><span class="si-n">2AM</span><span class="si-l">Fri Close</span></div>
+      <div class="si"><span class="si-n">18+</span><span class="si-l">Only</span></div>
+    </div>
+  </div>
+
+  <!-- FEATURED PRODUCTS -->
+  <section class="sec" style="background:var(--dark)">
+    <div class="w">
+      <div class="sh rv">
+        <div>
+          <div class="sh-eye">Featured</div>
+          <div class="sh-title">Top Picks</div>
+        </div>
+        <button class="btn btn-o" onclick="goPage('shop')">View All →</button>
+      </div>
+      <div class="pgrid">
+        <div class="pc rv">
+          <div class="pc-img">
+            <div class="pc-badge pc-badge-premium">Premium</div>
+            <img src="./HennessyVSOP.jpeg" alt="Hennessy VSOP"  style="width:100%;height:100%;object-fit:contain;padding:.75rem">
+          </div>
+          <div class="pc-body">
+            <div class="pc-cat">Cognac</div>
+            <div class="pc-name">Hennessy VSOP</div>
+            <div class="pc-origin">France</div>
+            <div class="pc-foot">
+              <div class="pc-price">KES 8,900<small>per bottle</small></div>
+              <button class="pc-add" onclick="addToCart('hennessy',this)">+</button>
+            </div>
+          </div>
+        </div>
+        <div class="pc rv d1">
+          <div class="pc-img"><img src="./John Barr.jpeg" alt="John Barr Whisky" style="width:100%;height:100%;object-fit:contain;padding:.75rem"></div>
+          <div class="pc-body">
+            <div class="pc-cat">Whisky</div>
+            <div class="pc-name">John Barr Whisky</div>
+            <div class="pc-origin">Scotland</div>
+            <div class="pc-foot">
+              <div class="pc-price">KES 3,200<small>per bottle</small></div>
+              <button class="pc-add" onclick="addToCart('johnbarr',this)">+</button>
+            </div>
+          </div>
+        </div>
+        <div class="pc rv d2">
+          <div class="pc-img"><img src="./Kenya Cane.jpeg" alt="Kenya Cane Lemon" style="width:100%;height:100%;object-fit:contain;padding:.75rem"></div>
+          <div class="pc-body">
+            <div class="pc-cat">Rum</div>
+            <div class="pc-name">Kenya Cane Lemon</div>
+            <div class="pc-origin">Kenya</div>
+            <div class="pc-foot">
+              <div class="pc-price">KES 1,800<small>per bottle</small></div>
+              <button class="pc-add" onclick="addToCart('kenyacane',this)">+</button>
+            </div>
+          </div>
+        </div>
+        <div class="pc rv d3">
+          <div class="pc-img"><img src="./CaptainMorgan.jpeg" alt="Captain Morgan" style="width:100%;height:100%;object-fit:contain;padding:.75rem"></div>
+          <div class="pc-body">
+            <div class="pc-cat">Rum</div>
+            <div class="pc-name">Captain Morgan</div>
+            <div class="pc-origin">Caribbean</div>
+            <div class="pc-foot">
+              <div class="pc-price">KES 2,800<small>per bottle</small></div>
+              <button class="pc-add" onclick="addToCart('captainmorgan',this)">+</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRIO -->
+  <section class="trio">
+    <div class="trio-grid">
+      <div class="ti rv" onclick="goPage('shop')">
+        <div class="ti-num">01</div>
+        <div class="ti-title">Bottle Shop</div>
+        <div class="ti-desc">Over 500 labels — wines, spirits, beers, and mixers from across the globe. Walk in or order for delivery.</div>
+        <div class="ti-cta">Browse the shop →</div>
+      </div>
+      <div class="ti rv d1" onclick="goPage('bar')">
+        <div class="ti-num">02</div>
+        <div class="ti-title">Bar &amp; Lounge</div>
+        <div class="ti-desc">Cold pours, hot beats, and a vibe you won't forget. DJ nights, cocktails, and the best terrace in the neighbourhood.</div>
+        <div class="ti-cta">See the menu →</div>
+      </div>
+      <div class="ti rv d2" onclick="goPage('delivery')">
+        <div class="ti-num">03</div>
+        <div class="ti-title">Home Delivery</div>
+        <div class="ti-desc">Order by 9PM and we'll bring it to your door. Same-day delivery across Nairobi. Cold, fast, no nonsense.</div>
+        <div class="ti-cta">Delivery info →</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VIBE -->
+  <section class="vibe">
+    <div class="vibe-glow"></div>
+    <div class="w vibe-in">
+      <div class="sh-eye rv">The Experience</div>
+      <div class="vibe-hl rv d1">FROM SPIRITS<br>TO BEER,<br><span class="t">FIND IT ALL RIGHT HERE.</span></div>
+      <div class="vibe-sub rv d2">The Mad Monkey is a Nairobi institution — part bottle shop, part bar, part community. Come for the drinks, stay for the riddims.</div>
+      <button class="btn btn-p rv d3" onclick="goPage('bar')">See What's On →</button>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="w">
+      <div class="footer-g">
+        <div>
+          <div class="footer-brand">THE <em>MAD</em> MONKEY</div>
+          <div class="footer-sub">Wines &amp; Spirits · Bar &amp; Lounge · Home Delivery. Nairobi's most spirited destination.</div>
+          <div style="font-family:'Space Mono',monospace;font-size:.68rem;color:var(--teal)">Mad Fun · Mad Vibes · Mad Riddims</div>
+        </div>
+        <div>
+          <div class="footer-ct">Navigate</div>
+          <div class="footer-links">
+            <div class="footer-lnk" onclick="goPage('home')">Home</div>
+            <div class="footer-lnk" onclick="goPage('shop')">Shop</div>
+            <div class="footer-lnk" onclick="goPage('bar')">Bar &amp; Lounge</div>
+            <div class="footer-lnk" onclick="goPage('delivery')">Delivery</div>
+            <div class="footer-lnk" onclick="goPage('about')">About</div>
+          </div>
+        </div>
+        <div>
+          <div class="footer-ct">Categories</div>
+          <div class="footer-links">
+            <div class="footer-lnk" onclick="goPage('shop')">Wines</div>
+            <div class="footer-lnk" onclick="goPage('shop')">Whisky</div>
+            <div class="footer-lnk" onclick="goPage('shop')">Gin</div>
+            <div class="footer-lnk" onclick="goPage('shop')">Vodka</div>
+            <div class="footer-lnk" onclick="goPage('shop')">Rum</div>
+            <div class="footer-lnk" onclick="goPage('shop')">Beer</div>
+          </div>
+        </div>
+        <div>
+          <div class="footer-ct">Contact</div>
+          <div class="footer-links">
+            <div class="footer-lnk">📍 Nairobi, Kenya</div>
+            <div class="footer-lnk">📞 +254 700 000 000</div>
+            <div class="footer-lnk">📧 hello@madmonkey.co.ke</div>
+            <div class="footer-lnk">🕙 Mon–Sun: 10AM–2AM</div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bot">
+        <div class="footer-cr">© <span class="yr"></span> The Mad Monkey Wines &amp; Spirits. All rights reserved. All rights reserved.</div>
+        <div class="footer-cr">Drink responsibly. 18+ only.</div>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<!-- ===================== SHOP ===================== -->
+<div class="page page-sub" id="page-shop">
+  <div class="shop-top">
+    <div class="w">
+      <div class="shop-top-row">
+        <div class="shop-title">THE CELLAR</div>
+        <button class="btn btn-p" onclick="openCart()">Cart (<span id="cart-count-shop">0</span>)</button>
+      </div>
+      <div class="filters" id="filter-btns">
+        <button class="fb on" data-cat="all">All</button>
+      </div>
+    </div>
+  </div>
+  <div class="w sec">
+    <div class="count-lbl" id="shop-count">Showing 12 products</div>
+    <div class="pgrid" id="shop-grid"></div>
+  </div>
+  <footer class="footer">
+    <div class="w">
+      <div class="footer-bot">
+        <div class="footer-cr">© 2025 The Mad Monkey Wines &amp; Spirits.</div>
+        <div class="footer-cr">Drink responsibly. 18+ only.</div>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<!-- ===================== BAR ===================== -->
+<div class="page page-sub" id="page-bar">
+  <div class="bar-top">
+    <div class="bar-glow"></div>
+    <div class="w" style="position:relative;z-index:1">
+      <div class="sh-eye rv">Nairobi's Best Terrace</div>
+      <div style="font-family:'Bebas Neue',sans-serif;font-size:clamp(3rem,9vw,8rem);line-height:.9;margin-bottom:1.25rem" class="rv d1">BAR &amp;<br><span style="color:var(--teal)">LOUNGE</span></div>
+      <div style="font-size:.93rem;color:var(--gr);max-width:500px;line-height:1.8" class="rv d2">Cold drinks, hot beats, and a vibe that doesn't quit. DJ nights every Friday and Saturday. Walk-ins welcome.</div>
+    </div>
+  </div>
+
+  <!-- HOURS + INFO -->
+  <section class="sec" style="background:var(--dark)">
+    <div class="w">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem" class="rv">
+        <div>
+          <div class="sh-eye" style="margin-bottom:1.25rem">Opening Hours</div>
+          <div>
+            <div class="hrow"><span class="hrow-day">Monday – Thursday</span><span class="hrow-time">10:00 AM – 12:00 AM</span></div>
+            <div class="hrow"><span class="hrow-day">Friday</span><span class="hrow-time">10:00 AM – 2:00 AM</span></div>
+            <div class="hrow"><span class="hrow-day">Saturday</span><span class="hrow-time">10:00 AM – 3:00 AM</span></div>
+            <div class="hrow"><span class="hrow-day">Sunday</span><span class="hrow-time">12:00 PM – 11:00 PM</span></div>
+          </div>
+        </div>
+        <div>
+          <div class="sh-eye" style="margin-bottom:1.25rem">Find Us</div>
+          <div style="font-size:.93rem;color:var(--gr);line-height:2">
+            📍 Nairobi, Kenya<br>
+            📞 +254 700 000 000<br>
+            📧 bar@madmonkey.co.ke<br>
+            🎵 DJ nights every Fri &amp; Sat
+          </div>
+          <button class="btn btn-p" style="margin-top:1.5rem" onclick="goPage('about')">Get Directions →</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MENU -->
+  <section class="sec" style="background:var(--black)">
+    <div class="w">
+      <div class="sh rv">
+        <div>
+          <div class="sh-eye">Bar Menu</div>
+          <div class="sh-title">Drinks &amp; More</div>
+        </div>
+      </div>
+      <div class="menu-grid">
+        <div class="mc rv">
+          <div class="mc-hd"><span class="mc-icon">🥃</span><span class="mc-name">Spirits &amp; Drams</span></div>
+          <div class="mi"><div><div class="mi-name">Johnnie Walker Black</div><div class="mi-desc">50ml / 1L available</div></div><div class="mi-price">KES 450</div></div>
+          <div class="mi"><div><div class="mi-name">Hennessy VSOP</div><div class="mi-desc">50ml pour</div></div><div class="mi-price">KES 850</div></div>
+          <div class="mi"><div><div class="mi-name">Glenfiddich 12yr</div><div class="mi-desc">Single malt, 50ml</div></div><div class="mi-price">KES 700</div></div>
+          <div class="mi"><div><div class="mi-name">Jack Daniel's</div><div class="mi-desc">50ml pour</div></div><div class="mi-price">KES 420</div></div>
+          <div class="mi"><div><div class="mi-name">Patron Silver Tequila</div><div class="mi-desc">50ml shot</div></div><div class="mi-price">KES 550</div></div>
+        </div>
+        <div class="mc rv d1">
+          <div class="mc-hd"><span class="mc-icon">🍸</span><span class="mc-name">Cocktails</span></div>
+          <div class="mi"><div><div class="mi-name">Mad Monkey Punch</div><div class="mi-desc">House special · tropical &amp; bold</div></div><div class="mi-price">KES 900</div></div>
+          <div class="mi"><div><div class="mi-name">Nairobi Mule</div><div class="mi-desc">Vodka · ginger beer · lime</div></div><div class="mi-price">KES 850</div></div>
+          <div class="mi"><div><div class="mi-name">Jungle Negroni</div><div class="mi-desc">Gin · Campari · sweet vermouth</div></div><div class="mi-price">KES 950</div></div>
+          <div class="mi"><div><div class="mi-name">Riddim Margarita</div><div class="mi-desc">Tequila · triple sec · fresh lime</div></div><div class="mi-price">KES 880</div></div>
+          <div class="mi"><div><div class="mi-name">Banana Daiquiri</div><div class="mi-desc">Rum · banana · lime · sugar</div></div><div class="mi-price">KES 820</div></div>
+        </div>
+        <div class="mc rv d2">
+          <div class="mc-hd"><span class="mc-icon">🍷</span><span class="mc-name">Wine by Glass</span></div>
+          <div class="mi"><div><div class="mi-name">House Red</div><div class="mi-desc">Shiraz blend, South Africa</div></div><div class="mi-price">KES 600</div></div>
+          <div class="mi"><div><div class="mi-name">House White</div><div class="mi-desc">Sauvignon Blanc, NZ</div></div><div class="mi-price">KES 600</div></div>
+          <div class="mi"><div><div class="mi-name">Prosecco</div><div class="mi-desc">Italian sparkling</div></div><div class="mi-price">KES 750</div></div>
+          <div class="mi"><div><div class="mi-name">Rosé</div><div class="mi-desc">Whispering Angel, France</div></div><div class="mi-price">KES 850</div></div>
+        </div>
+        <div class="mc rv d3">
+          <div class="mc-hd"><span class="mc-icon">🍺</span><span class="mc-name">Beer &amp; Soft</span></div>
+          <div class="mi"><div><div class="mi-name">Tusker Lager</div><div class="mi-desc">500ml cold bottle</div></div><div class="mi-price">KES 300</div></div>
+          <div class="mi"><div><div class="mi-name">Guinness</div><div class="mi-desc">Draught pint</div></div><div class="mi-price">KES 450</div></div>
+          <div class="mi"><div><div class="mi-name">Corona</div><div class="mi-desc">330ml bottle &amp; lime</div></div><div class="mi-price">KES 380</div></div>
+          <div class="mi"><div><div class="mi-name">Soft Drinks</div><div class="mi-desc">Coke · Fanta · Sprite · Water</div></div><div class="mi-price">KES 150</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EVENTS -->
+  <section class="sec" style="background:var(--dark)">
+    <div class="w">
+      <div class="sh rv">
+        <div>
+          <div class="sh-eye">What's On</div>
+          <div class="sh-title">Upcoming Events</div>
+        </div>
+      </div>
+      <div class="ev-grid">
+        <div class="ev rv">
+          <div class="ev-date">Every Friday Night</div>
+          <div class="ev-body">
+            <div class="ev-title">Mad Friday DJ Nights</div>
+            <div class="ev-desc">Afrobeats · Amapiano · R&amp;B. The best DJs in Nairobi turn the terrace into a dance floor. 9PM until late. No cover charge.</div>
+          </div>
+        </div>
+        <div class="ev rv d1">
+          <div class="ev-date">Every Saturday</div>
+          <div class="ev-body">
+            <div class="ev-title">Saturday Vibes</div>
+            <div class="ev-desc">Bigger sound, bigger crowd. DJ sets from 8PM. Guest DJs every second Saturday. Cocktail specials all night.</div>
+          </div>
+        </div>
+        <div class="ev rv d2">
+          <div class="ev-date">Monthly · Last Sunday</div>
+          <div class="ev-body">
+            <div class="ev-title">Wine Tasting Sessions</div>
+            <div class="ev-desc">Curated wine flights with our expert sommelier. Limited seats — book in advance. KES 2,500 per person includes 6 pours.</div>
+          </div>
+        </div>
+        <div class="ev rv d3">
+          <div class="ev-date">Private Events</div>
+          <div class="ev-body">
+            <div class="ev-title">Book the Venue</div>
+            <div class="ev-desc">Corporate events, birthday parties, product launches. Full venue hire available. Contact us for packages and availability.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="w">
+      <div class="footer-bot">
+        <div class="footer-cr">© 2025 The Mad Monkey Wines &amp; Spirits.</div>
+        <div class="footer-cr">Drink responsibly. 18+ only.</div>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<!-- ===================== DELIVERY ===================== -->
+<div class="page page-sub" id="page-delivery">
+  <section class="sec">
+    <div class="w">
+      <div class="sh-eye rv">Fast &amp; Cold</div>
+      <div style="font-family:'Bebas Neue',sans-serif;font-size:clamp(3rem,9vw,8rem);line-height:.9;margin-bottom:1.5rem" class="rv d1">NAIROBI<br><span style="color:var(--teal)">DELIVERY</span></div>
+      <div style="font-size:.93rem;color:var(--gr);max-width:520px;line-height:1.8;margin-bottom:4rem" class="rv d2">Order by 9PM and we deliver to your door. Ice cold, tamper-evident, no nonsense. Minimum order KES 2,000.</div>
+      <div class="steps-g rv">
+        <div class="step">
+          <div class="step-n">01</div>
+          <div class="step-t">Browse &amp; Order</div>
+          <div class="step-d">Shop our full range online or call us directly. Add to cart, select delivery, and checkout securely.</div>
+        </div>
+        <div class="step">
+          <div class="step-n">02</div>
+          <div class="step-t">We Pack &amp; Dispatch</div>
+          <div class="step-d">Your order is packed cold, sealed, and dispatched by our rider within 30 minutes of confirmation.</div>
+        </div>
+        <div class="step">
+          <div class="step-n">03</div>
+          <div class="step-t">Door-to-Door</div>
+          <div class="step-d">Track your order in real time. Arrives cold, intact, and ready to pour. No substitutions without consent.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" style="background:var(--dark)">
+    <div class="w">
+      <div class="sh rv">
+        <div>
+          <div class="sh-eye">Coverage</div>
+          <div class="sh-title">Delivery Zones</div>
+        </div>
+        <button class="btn btn-p" onclick="goPage('shop')">Order Now →</button>
+      </div>
+      <div class="zones-g">
+        <div class="zone rv"><div class="zone-name">CBD / City Centre</div><div class="zone-time">⏱ 20–30 mins</div><div class="zone-fee">KES 150</div></div>
+        <div class="zone rv d1"><div class="zone-name">Westlands</div><div class="zone-time">⏱ 25–35 mins</div><div class="zone-fee">KES 200</div></div>
+        <div class="zone rv d2"><div class="zone-name">Kilimani</div><div class="zone-time">⏱ 30–40 mins</div><div class="zone-fee">KES 200</div></div>
+        <div class="zone rv d3"><div class="zone-name">Lavington</div><div class="zone-time">⏱ 35–45 mins</div><div class="zone-fee">KES 250</div></div>
+        <div class="zone rv"><div class="zone-name">Parklands</div><div class="zone-time">⏱ 25–35 mins</div><div class="zone-fee">KES 200</div></div>
+        <div class="zone rv d1"><div class="zone-name">Muthaiga</div><div class="zone-time">⏱ 40–50 mins</div><div class="zone-fee">KES 300</div></div>
+        <div class="zone rv d2"><div class="zone-name">Karen</div><div class="zone-time">⏱ 45–55 mins</div><div class="zone-fee">KES 350</div></div>
+        <div class="zone rv d3"><div class="zone-name">Runda</div><div class="zone-time">⏱ 45–55 mins</div><div class="zone-fee">KES 400</div></div>
+        <div class="zone rv"><div class="zone-name">Gigiri</div><div class="zone-time">⏱ 40–50 mins</div><div class="zone-fee">KES 350</div></div>
+        <div class="zone rv d1"><div class="zone-name">Upperhill</div><div class="zone-time">⏱ 30–40 mins</div><div class="zone-fee">KES 200</div></div>
+        <div class="zone rv d2"><div class="zone-name">Ngong Road</div><div class="zone-time">⏱ 35–45 mins</div><div class="zone-fee">KES 250</div></div>
+        <div class="zone rv d3"><div class="zone-name">Hurlingham</div><div class="zone-time">⏱ 30–40 mins</div><div class="zone-fee">KES 200</div></div>
+      </div>
+      <div style="background:var(--sf);border-radius:10px;padding:2rem;margin-top:2rem;border:1px solid var(--grd)" class="rv">
+        <div style="font-family:'Space Mono',monospace;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);margin-bottom:.75rem">Delivery Policy</div>
+        <div style="font-size:.87rem;color:var(--gr);line-height:1.9">
+          • Minimum order: KES 2,000 &nbsp;·&nbsp; Orders over KES 5,000 get free delivery within Westlands / Kilimani / CBD<br>
+          • Delivery hours: Monday–Thursday 10AM–11:30PM &nbsp;·&nbsp; Friday–Saturday 10AM–1:30AM &nbsp;·&nbsp; Sunday 12PM–10:30PM<br>
+          • Age verification required at door — valid ID must be presented to rider<br>
+          • Payment: M-Pesa, card on delivery, or prepaid online
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="w">
+      <div class="footer-bot">
+        <div class="footer-cr">© 2025 The Mad Monkey Wines &amp; Spirits.</div>
+        <div class="footer-cr">Drink responsibly. 18+ only.</div>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<!-- ===================== ABOUT ===================== -->
+<div class="page page-sub" id="page-about">
+  <section class="sec">
+    <div class="w">
+      <div class="about-g">
+        <div class="about-img">
+          <div class="about-glow"></div>
+          <svg viewBox="0 0 200 220" fill="currentColor" style="color:var(--teal)">
+            <ellipse cx="100" cy="115" rx="55" ry="65"/>
+            <ellipse cx="100" cy="65" rx="42" ry="42"/>
+            <ellipse cx="68" cy="55" rx="12" ry="12"/>
+            <ellipse cx="132" cy="55" rx="12" ry="12"/>
+            <rect x="30" y="90" width="25" height="12" rx="6"/>
+            <rect x="145" y="90" width="25" height="12" rx="6"/>
+          </svg>
+        </div>
+        <div>
+          <div class="sh-eye rv">Our Story</div>
+          <div style="font-family:'Bebas Neue',sans-serif;font-size:clamp(2.5rem,6vw,5rem);line-height:.92;margin-bottom:1.5rem" class="rv d1">WHERE <span style="color:var(--teal)">NAIROBI</span><br>COMES<br>TO POUR</div>
+          <div style="font-size:.93rem;color:var(--gr);line-height:1.85;margin-bottom:1.5rem" class="rv d2">The Mad Monkey started as a simple idea: Nairobi deserved a bottle shop that felt as alive as the city itself. No stuffy wine walls, no hushed atmospheres. Just great drinks, honest prices, and a space that brings people together.</div>
+          <div style="font-size:.93rem;color:var(--gr);line-height:1.85;margin-bottom:2rem" class="rv d3">Today we're a retail shop, a bar and lounge, and a delivery service rolled into one. From the neighbourhood regular to the uptown crowd — everyone is welcome at The Mad Monkey.</div>
+          <button class="btn btn-p rv d4" onclick="goPage('shop')">Shop the Collection →</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" style="background:var(--dark)">
+    <div class="w">
+      <div class="sh rv">
+        <div>
+          <div class="sh-eye">Get In Touch</div>
+          <div class="sh-title">Contact Us</div>
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem">
+        <div class="rv">
+          <div class="cinfo"><div class="ci-label">Address</div><div class="ci-val">The Mad Monkey, Nairobi, Kenya</div></div>
+          <div class="cinfo"><div class="ci-label">Phone / WhatsApp</div><div class="ci-val">+254 700 000 000</div></div>
+          <div class="cinfo"><div class="ci-label">Email</div><div class="ci-val">hello@madmonkey.co.ke</div></div>
+          <div class="cinfo"><div class="ci-label">Opening Hours</div><div class="ci-val">Mon–Thu 10AM–12AM · Fri–Sat 10AM–2AM · Sun 12PM–11PM</div></div>
+          <div class="soc-row">
+            <div class="soc-pill">Instagram</div>
+            <div class="soc-pill">Facebook</div>
+            <div class="soc-pill">TikTok</div>
+            <div class="soc-pill">WhatsApp</div>
+          </div>
+        </div>
+        <div class="rv d1">
+          <div style="font-family:'Space Mono',monospace;font-size:.64rem;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);margin-bottom:1.1rem">Send a Message</div>
+          <div class="fg"><label>Your Name</label><input type="text" placeholder="Jane Doe"></div>
+          <div class="fg"><label>Email or Phone</label><input type="text" placeholder="jane@email.com"></div>
+          <div class="fg"><label>Subject</label>
+            <select>
+              <option>General Enquiry</option>
+              <option>Bulk Order</option>
+              <option>Private Event</option>
+              <option>Delivery Issue</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="fg"><label>Message</label><textarea placeholder="How can we help?"></textarea></div>
+          <button class="btn btn-p">Send Message →</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="w">
+      <div class="footer-bot">
+        <div class="footer-cr">© 2025 The Mad Monkey Wines &amp; Spirits.</div>
+        <div class="footer-cr">Drink responsibly. 18+ only.</div>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<!-- ===================== CART DRAWER ===================== -->
+<div class="cart-ov" id="cart-ov" onclick="closeCart()"></div>
+<div class="cart-dr" id="cart-dr">
+  <div class="cart-hd">
+    <div class="cart-hd-title">Your Cart</div>
+    <button class="x-btn" onclick="closeCart()">✕</button>
+  </div>
+  <div class="cart-body" id="cart-body">
+    <div class="cart-empty" id="cart-empty">
+      <div class="cart-empty-icon">🛒</div>
+      <div style="font-family:'Bebas Neue',sans-serif;font-size:1.5rem;margin-bottom:.5rem">Your cart is empty</div>
+      <div style="font-size:.85rem;color:var(--gr)">Add something delicious</div>
+    </div>
+    <div id="cart-items"></div>
+  </div>
+  <div class="cart-ft" id="cart-ft" style="display:none">
+    <div class="cart-tot-row">
+      <div class="cart-tot-lbl">Subtotal</div>
+      <div class="cart-tot-val" id="cart-total">KES 0</div>
+    </div>
+    <button class="btn btn-p btn-fw" onclick="startCheckout()">Proceed to Checkout →</button>
+  </div>
+</div>
+
+<!-- ===================== AGE GATE ===================== -->
+<div class="age-ov" id="age-ov">
+  <div class="age-box">
+    <div class="age-ink">
+      <svg viewBox="0 0 200 200" fill="currentColor"><circle cx="100" cy="100" r="55"/><circle cx="148" cy="62" r="22"/><circle cx="58" cy="152" r="16"/><circle cx="162" cy="145" r="11"/></svg>
+    </div>
+    <div class="age-icon">🔞</div>
+    <div class="age-title">Are You 18+?</div>
+    <div class="age-sub">The Mad Monkey sells alcoholic beverages. You must be of legal drinking age to purchase.</div>
+    <div class="age-notice">Kenya legal drinking age: 18 years</div>
+    <div class="age-btns">
+      <button class="btn btn-p" onclick="confirmAge()">Yes, I'm 18+</button>
+      <button class="btn btn-o" onclick="denyAge()">No, I'm Under 18</button>
+    </div>
+    <div class="age-legal">By confirming, you agree that you are of legal drinking age in your jurisdiction and take full responsibility for your purchase. The Mad Monkey promotes responsible drinking.</div>
+  </div>
+</div>
+
+<!-- ===================== CHECKOUT ===================== -->
+<div class="co-ov" id="co-ov">
+  <div class="co-box">
+    <div class="co-hd" id="co-hd">
+      <div class="co-title">Checkout</div>
+      <button class="x-btn" onclick="closeCheckout()">✕</button>
+    </div>
+    <div id="co-form-wrap">
+      <div class="co-body">
+        <div class="co-st">Order Summary</div>
+        <div class="co-sum" id="co-summary"></div>
+        <div class="co-div"></div>
+        <div class="co-st">Delivery Details</div>
+        <div class="fr2">
+          <div class="fg"><label>First Name</label><input type="text" placeholder="Jane" id="co-fname" required></div>
+          <div class="fg"><label>Last Name</label><input type="text" placeholder="Doe" id="co-lname" required></div>
+        </div>
+        <div class="fg"><label>Phone (M-Pesa / WhatsApp)</label><input type="tel" placeholder="+254 700 000 000" id="co-phone" required></div>
+        <div class="fg"><label>Delivery Address</label><input type="text" placeholder="Street, Area, Nairobi" id="co-addr" required></div>
+        <div class="fr2">
+          <div class="fg"><label>Area / Zone</label>
+            <select id="co-zone">
+              <option value="150">CBD / City Centre — KES 150</option>
+              <option value="200">Westlands — KES 200</option>
+              <option value="200">Kilimani — KES 200</option>
+              <option value="250">Lavington — KES 250</option>
+              <option value="200">Parklands — KES 200</option>
+              <option value="300">Muthaiga — KES 300</option>
+              <option value="350">Karen — KES 350</option>
+              <option value="400">Runda — KES 400</option>
+              <option value="350">Gigiri — KES 350</option>
+              <option value="200">Upperhill — KES 200</option>
+            </select>
+          </div>
+          <div class="fg"><label>Payment Method</label>
+            <select id="co-payment">
+              <option>M-Pesa on Delivery</option>
+              <option>Cash on Delivery</option>
+              <option>Card on Delivery</option>
+            </select>
+          </div>
+        </div>
+        <div class="fg"><label>Special Instructions (optional)</label><textarea placeholder="Gate code, landmarks, timing preferences..."></textarea></div>
+      </div>
+      <div class="co-ft">
+        <button class="btn btn-o" onclick="closeCheckout()">Back</button>
+        <button class="btn btn-p" style="flex:1;justify-content:center" onclick="submitOrder()">Place Order — <span id="co-total-btn">KES 0</span></button>
+      </div>
+    </div>
+    <div class="co-success" id="co-success">
+      <div class="co-s-icon">🎉</div>
+      <div class="co-s-title">Order Placed!</div>
+      <div class="co-s-sub">Your Mad Monkey order is confirmed. We'll WhatsApp you shortly with your delivery ETA.<br><br>Get the drinks cold — your rider is on the way. 🛵</div>
+      <button class="btn btn-p" style="margin-top:2rem" onclick="closeCheckout();goPage('home')">Back to Home →</button>
+    </div>
+  </div>
+</div>
+
+<!-- SEARCH OVERLAY -->
+<div class="srch-ov" id="srch-ov" onclick="srchOvClick(event)">
+  <div class="srch-box">
+    <div class="srch-top">
+      <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <input type="search" id="srch-input" placeholder="Search wines, spirits, beer…" autocomplete="off" spellcheck="false">
+      <button class="x-btn" onclick="closeSearch()" style="flex-shrink:0">✕</button>
+    </div>
+    <div class="srch-results" id="srch-results">
+      <div class="srch-hint">Start typing to search our full collection</div>
+    </div>
+  </div>
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
+
+<script>
+// ===================== API =====================
+const API_BASE='https://ecommerceapibackend-production.up.railway.app';
+
+function getCartCode(){
+  let c=localStorage.getItem('mm_cart');
+  if(!c){c='mm_'+Math.random().toString(36).substr(2,9)+'_'+Date.now().toString(36);localStorage.setItem('mm_cart',c);}
+  return c;
+}
+
+// ===================== DATA =====================
+let PRODUCTS=[];
+
+// Local featured products — used when API isn't available or for homepage cards
+const LOCAL_PRODUCTS=[
+  {id:'hennessy',name:'Hennessy VSOP',cat:'cognac',label:'Cognac',origin:'France',price:8900,image:'./hennessy.png.jpeg',blend:'multiply'},
+  {id:'johnbarr',name:'John Barr Whisky',cat:'whisky',label:'Whisky',origin:'Scotland',price:3200,image:'./johnbarr.jpg.jpeg'},
+  {id:'kenyacane',name:'Kenya Cane Lemon',cat:'rum',label:'Rum',origin:'Kenya',price:1800,image:'./kenyacane.jpg.jpeg',blend:'multiply'},
+  {id:'captainmorgan',name:'Captain Morgan',cat:'rum',label:'Rum',origin:'Caribbean',price:2800,image:'./captainmorgan.jpg.jpeg'},
+];
+
+const SKEL='<div class="pc-skeleton"><div class="sk-img"></div><div class="sk-line"></div><div class="sk-line short"></div></div>';
+
+function resolveImg(img){
+  if(!img)return null;
+  if(img.startsWith('http://')||img.startsWith('https://'))return img;
+  // Local relative path — return as-is
+  if(img.startsWith('./')||img.startsWith('../'))return img;
+  // Django media path (e.g. "img/products/bottle.jpg")
+  return API_BASE+'/'+img.replace(/^\//,'');
+}
+
+function imgFallback(el,cat){
+  const wrap=el.closest('.pc-img,.ci-img,.srch-img');
+  if(wrap)wrap.innerHTML=bottleSVG(cat||'default');
+}
+
+function makeCard(p){
+  const src=resolveImg(p.image);
+  const blendClass=p.blend?` blend-${p.blend}`:'';
+  const imgHtml=src
+    ?`<img src="${src}" alt="${p.name}" class="${blendClass.trim()}" style="width:100%;height:100%;object-fit:contain;padding:.75rem" onerror="imgFallback(this,'${p.cat||''}')">`
+    :bottleSVG(p.cat||'default');
+  const idArg=typeof p.id==='string'?`'${p.id}'`:p.id;
+  return`<div class="pc">
+    <div class="pc-img">
+      ${p.badge?`<div class="pc-badge pc-badge-${p.badge}">${p.badge==='new'?'New':'Sale'}</div>`:''}
+      ${imgHtml}
+    </div>
+    <div class="pc-body">
+      <div class="pc-cat">${p.label||''}</div>
+      <div class="pc-name">${p.name}</div>
+      <div class="pc-origin">${p.origin||''}</div>
+      <div class="pc-foot">
+        <div class="pc-price">${fmt(p.price)}<small>per bottle</small></div>
+        <button class="pc-add" onclick="addToCart(${idArg},this)">+</button>
+      </div>
+    </div>
+  </div>`;
+}
+
+async function filterProducts(slug){
+  const sg=document.getElementById('shop-grid');
+  if(slug==='all'){renderProducts();return;}
+  if(sg)sg.innerHTML=Array(6).fill(SKEL).join('');
+  try{
+    const res=await fetch(API_BASE+'/categories/'+slug);
+    const data=await res.json();
+    const items=(data.products||[]).map(p=>({
+      id:p.id,name:p.name,slug:p.slug||'',
+      cat:slug,label:data.name||slug,
+      origin:'',price:parseFloat(p.price)||0,badge:'',image:p.image||null,
+    }));
+    if(sg){
+      sg.innerHTML=items.length?items.map(makeCard).join(''):'<div style="padding:3rem;text-align:center;color:var(--gr)">No products in this category yet</div>';
+      const cl=document.getElementById('shop-count');
+      if(cl)cl.textContent=`Showing ${items.length} product${items.length!==1?'s':''}`;
+    }
+  }catch(e){
+    if(sg)sg.innerHTML='<div style="padding:3rem;text-align:center;color:var(--gr)">Could not load category</div>';
+  }
+}
+
+async function loadProducts(){
+  const fg=document.getElementById('featured-grid');
+  const sg=document.getElementById('shop-grid');
+  if(fg)fg.innerHTML=Array(4).fill(SKEL).join('');
+  if(sg)sg.innerHTML=Array(8).fill(SKEL).join('');
+  try{
+    const[pr,cr]=await Promise.all([
+      fetch(API_BASE+'/product_list'),
+      fetch(API_BASE+'/category_list')
+    ]);
+    const rawP=await pr.json();
+    const rawC=await cr.json();
+    const prods=Array.isArray(rawP)?rawP:rawP.results||[];
+    const cats=Array.isArray(rawC)?rawC:rawC.results||[];
+    // /product_list returns {id,name,slug,image,price} — no category field
+    PRODUCTS=prods.map(p=>({
+      id:p.id,name:p.name,slug:p.slug||'',
+      cat:'',label:'',origin:'',
+      price:parseFloat(p.price)||0,
+      badge:'',image:p.image||null,
+    }));
+    // Rebuild filter buttons from real category slugs
+    const fb=document.getElementById('filter-btns');
+    if(fb&&cats.length){
+      fb.innerHTML='<button class="fb on" data-cat="all">All</button>'+
+        cats.map(c=>`<button class="fb" data-cat="${c.slug}">${c.name}</button>`).join('');
+      fb.querySelectorAll('.fb').forEach(btn=>{
+        btn.addEventListener('click',()=>{
+          fb.querySelectorAll('.fb').forEach(b=>b.classList.remove('on'));
+          btn.classList.add('on');
+          filterProducts(btn.dataset.cat);
+        });
+      });
+    }
+    renderProducts();
+  }catch(e){
+    // API unavailable — fall back to local products
+    PRODUCTS=LOCAL_PRODUCTS;
+    renderProducts();
+  }
+}
+
+// BOTTLE COLORS per category
+const BCOLS = {whisky:'#8B5E3C',cognac:'#7A4A2A',champagne:'#C8A84B',gin:'#4A9FD4',rum:'#5C3A1E',vodka:'#A0C4D8',tequila:'#C8B84B',wine:'#8B2252',beer:'#C8883A',default:'#4DD9C8'};
+const BLIGHTS = {whisky:'#D4975A',cognac:'#B87040',champagne:'#E8C870',gin:'#78C4F0',rum:'#8A5A32',vodka:'#C8E4F0',tequila:'#E8D870',wine:'#B84A72',beer:'#E8A850',default:'#78EDD8'};
+
+function bottleSVG(cat){
+  const c=BCOLS[cat]||BCOLS.default;
+  const l=BLIGHTS[cat]||BLIGHTS.default;
+  return `<svg viewBox="0 0 80 200" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:52%;height:72%">
+    <rect x="30" y="0" width="20" height="28" rx="3" fill="${c}" opacity=".8"/>
+    <rect x="26" y="28" width="28" height="8" rx="2" fill="${c}"/>
+    <path d="M18 44 Q18 36 26 36 L54 36 Q62 36 62 44 L62 172 Q62 180 54 180 L26 180 Q18 180 18 172 Z" fill="${c}"/>
+    <rect x="22" y="60" width="36" height="50" rx="3" fill="white" opacity=".08"/>
+    <rect x="26" y="64" width="28" height="2" rx="1" fill="${l}" opacity=".4"/>
+    <rect x="26" y="70" width="20" height="1" rx=".5" fill="${l}" opacity=".25"/>
+    <rect x="26" y="74" width="24" height="1" rx=".5" fill="${l}" opacity=".25"/>
+    <path d="M22 152 Q40 148 58 152 L58 168 Q40 172 22 168 Z" fill="white" opacity=".06"/>
+  </svg>`;
+}
+
+// ===================== CART STATE =====================
+let cart=[];
+
+function cartTotal(){return cart.reduce((s,i)=>s+i.price*i.qty,0);}
+function cartCount(){return cart.reduce((s,i)=>s+i.qty,0);}
+function fmt(n){return'KES '+n.toLocaleString('en-KE');}
+
+async function syncCart(){
+  try{
+    const res=await fetch(API_BASE+'/get_cart/'+getCartCode());
+    if(!res.ok)return;
+    const data=await res.json();
+    const items=data.items||data.cart_items||data.data?.items||[];
+    const localItems=cart.filter(x=>typeof x.id==='string');
+    const apiItems=items.map(item=>{
+      const prod=item.product||item;
+      const catName=prod.category?.name||(typeof prod.category==='string'?prod.category:'Other');
+      return{
+        itemId:item.id,
+        id:prod.id||item.product_id,
+        name:prod.name||item.name||'',
+        cat:(catName).toLowerCase().replace(/[^a-z]/g,''),
+        label:catName,
+        price:parseFloat(prod.price||item.price||0),
+        qty:item.quantity||item.qty||1,
+        image:prod.image||prod.image_url||null,
+      };
+    });
+    cart=[...apiItems,...localItems];
+    updateCartUI();
+  }catch(e){}
+}
+
+async function addToCart(id,btnEl){
+  const p=PRODUCTS.find(x=>x.id===id)||LOCAL_PRODUCTS.find(x=>x.id===id);
+  if(!p)return;
+  if(btnEl){btnEl.classList.add('pop');setTimeout(()=>btnEl.classList.remove('pop'),400);}
+  showToast((p.name||'Item')+' added');
+  // Optimistic update
+  const ex=cart.find(x=>x.id===id);
+  if(ex){ex.qty++;}else{cart.push({...p,qty:1,itemId:null});}
+  updateCartUI();
+  if(typeof id==='number'){
+    try{
+      await fetch(API_BASE+'/add_to_cart/',{
+        method:'POST',headers:{'Content-Type':'application/json'},
+        body:JSON.stringify({cart_code:getCartCode(),product_id:id})
+      });
+      await syncCart();
+    }catch(e){/* keep optimistic state */}
+  }
+  const sc=document.getElementById('cart-count-shop');
+  if(sc)sc.textContent=cartCount();
+}
+
+async function removeFromCart(productId){
+  const item=cart.find(x=>x.id===productId);
+  if(!item)return;
+  cart=cart.filter(x=>x.id!==productId);
+  updateCartUI();
+  if(item.itemId){
+    try{await fetch(API_BASE+'/delete_cartitem/'+item.itemId+'/',{method:'DELETE'});}catch(e){}
+  }
+}
+
+async function changeQty(productId,delta){
+  const item=cart.find(x=>x.id===productId);
+  if(!item)return;
+  const newQty=item.qty+delta;
+  if(newQty<1)return; // floor at 1 — use delete button to remove
+  item.qty=newQty;
+  updateCartUI();
+  if(item.itemId){
+    try{
+      await fetch(API_BASE+'/update_cartitem_quantity/',{
+        method:'PUT',headers:{'Content-Type':'application/json'},
+        body:JSON.stringify({item_id:item.itemId,quantity:newQty})
+      });
+    }catch(e){await syncCart();}
+  }
+}
+
+function updateCartUI(){
+  const count=cartCount();
+  const total=cartTotal();
+  const badge=document.getElementById('cart-badge');
+  badge.textContent=count;
+  badge.classList.toggle('on',count>0);
+  const sc=document.getElementById('cart-count-shop');
+  if(sc)sc.textContent=count;
+  const emptyEl=document.getElementById('cart-empty');
+  const itemsEl=document.getElementById('cart-items');
+  const ftEl=document.getElementById('cart-ft');
+  const totalEl=document.getElementById('cart-total');
+  if(count===0){
+    emptyEl.style.display='block';
+    itemsEl.innerHTML='';
+    ftEl.style.display='none';
+  }else{
+    emptyEl.style.display='none';
+    ftEl.style.display='block';
+    totalEl.textContent=fmt(total);
+    itemsEl.innerHTML=cart.map(item=>{
+      const cartSrc=resolveImg(item.image);
+      const blendClass=item.blend?` blend-${item.blend}`:'';
+      const imgHtml=cartSrc
+        ?`<img src="${cartSrc}" alt="${item.name}" class="${blendClass.trim()}" style="width:100%;height:100%;object-fit:contain;padding:4px" onerror="imgFallback(this,'${item.cat||''}')">`
+        :bottleSVG(item.cat||'default');
+      const idArg=typeof item.id==='string'?`'${item.id}'`:item.id;
+      return`<div class="citem">
+        <div class="ci-img">${imgHtml}</div>
+        <div class="ci-info">
+          <div class="ci-name">${item.name}</div>
+          <div class="ci-cat">${item.label||''}</div>
+          <div class="ci-ctrl">
+            <button class="qb" onclick="changeQty(${idArg},-1)" ${item.qty<=1?'style="opacity:.35;cursor:not-allowed"':''}>−</button>
+            <span class="qv">${item.qty}</span>
+            <button class="qb" onclick="changeQty(${idArg},1)">+</button>
+          </div>
+        </div>
+        <div class="ci-right">
+          <div class="ci-price">${fmt(item.price*item.qty)}</div>
+          <button class="ci-del" onclick="removeFromCart(${idArg})" aria-label="Remove item">✕</button>
+        </div>
+      </div>`;}).join('');
+  }
+}
+
+// ===================== CART DRAWER =====================
+function openCart(){
+  document.getElementById('cart-ov').classList.add('on');
+  document.getElementById('cart-dr').classList.add('on');
+  document.body.style.overflow='hidden';
+}
+function closeCart(){
+  document.getElementById('cart-ov').classList.remove('on');
+  document.getElementById('cart-dr').classList.remove('on');
+  document.body.style.overflow='';
+}
+
+// ===================== AGE GATE =====================
+// Persist verification for the browser session (clears when tab closes)
+let ageVerified=sessionStorage.getItem('mm_age')==='1';
+let _ageCheckoutPending=false;
+
+function showAgeGate(fromCheckout=false){
+  _ageCheckoutPending=fromCheckout;
+  document.getElementById('age-ov').classList.add('on');
+}
+function startCheckout(){
+  if(cart.length===0){showToast('Your cart is empty');return;}
+  if(!ageVerified){showAgeGate(true);}else{closeCart();openCheckout();}
+}
+function confirmAge(){
+  ageVerified=true;
+  sessionStorage.setItem('mm_age','1');
+  document.getElementById('age-ov').classList.remove('on');
+  if(_ageCheckoutPending){_ageCheckoutPending=false;closeCart();openCheckout();}
+}
+function denyAge(){
+  _ageCheckoutPending=false;
+  document.getElementById('age-ov').classList.remove('on');
+  showToast('You must be 18+ to purchase alcohol');
+}
+// Show on page load for unverified visitors
+if(!ageVerified){setTimeout(()=>showAgeGate(false),900);}
+
+// ===================== CHECKOUT =====================
+function openCheckout(){
+  updateCoSummary();
+  document.getElementById('co-ov').classList.add('on');
+  document.body.style.overflow='hidden';
+}
+function closeCheckout(){
+  document.getElementById('co-ov').classList.remove('on');
+  document.body.style.overflow='';
+  // reset success state
+  document.getElementById('co-success').classList.remove('on');
+  document.getElementById('co-form-wrap').style.display='';
+  document.getElementById('co-hd').style.display='';
+}
+function updateCoSummary(){
+  const zone=parseInt(document.getElementById('co-zone')?.value||200);
+  const sub=cartTotal();
+  const del=sub>=5000?0:zone;
+  const tot=sub+del;
+  const btn=document.getElementById('co-total-btn');
+  if(btn)btn.textContent=fmt(tot);
+  const sumEl=document.getElementById('co-summary');
+  if(!sumEl)return;
+  sumEl.innerHTML=cart.map(i=>`<div class="co-row"><span>${i.name} ×${i.qty}</span><span>${fmt(i.price*i.qty)}</span></div>`).join('')
+    +`<div class="co-row"><span>Delivery</span><span>${del===0?'Free':fmt(del)}</span></div>`
+    +`<div class="co-row co-row-tot"><span>Total</span><span>${fmt(tot)}</span></div>`;
+}
+document.addEventListener('change',function(e){if(e.target&&e.target.id==='co-zone')updateCoSummary();});
+
+function submitOrder(){
+  const fname=document.getElementById('co-fname')?.value.trim();
+  const phone=document.getElementById('co-phone')?.value.trim();
+  const addr=document.getElementById('co-addr')?.value.trim();
+  if(!fname||!phone||!addr){showToast('Please fill in all required fields');return;}
+  // success
+  document.getElementById('co-form-wrap').style.display='none';
+  document.getElementById('co-hd').style.display='none';
+  document.getElementById('co-success').classList.add('on');
+  cart=[];
+  updateCartUI();
+}
+
+// ===================== NAVIGATION =====================
+function goPage(id){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('on'));
+  document.querySelectorAll('.nl').forEach(l=>l.classList.remove('on'));
+  document.querySelectorAll('.mob-lnk').forEach(l=>l.classList.remove('on'));
+  const page=document.getElementById('page-'+id);
+  if(page){page.classList.add('on');window.scrollTo({top:0,behavior:'smooth'});}
+  document.querySelectorAll('.nl,.mob-lnk').forEach(l=>{
+    if(l.textContent.toLowerCase().includes(id==='bar'?'bar':id==='delivery'?'delivery':id==='about'?'about':id==='shop'?'shop':'home')
+    ||(id==='home'&&l.textContent.toLowerCase()==='home')){l.classList.add('on');}
+  });
+  // trigger reveal + ink on new page
+  requestAnimationFrame(()=>{initReveal();if(id==='home')triggerInk();});
+}
+
+// ===================== MOBILE NAV =====================
+function openMob(){
+  document.getElementById('mob-ov').classList.add('on');
+  document.getElementById('mob-nav').classList.add('on');
+  document.body.style.overflow='hidden';
+}
+function closeMob(){
+  document.getElementById('mob-ov').classList.remove('on');
+  document.getElementById('mob-nav').classList.remove('on');
+  document.body.style.overflow='';
+}
+
+// ===================== SCROLL REVEAL =====================
+function initReveal(){
+  const els=document.querySelectorAll('.rv:not(.on)');
+  const obs=new IntersectionObserver(entries=>{
+    entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');obs.unobserve(e.target);}});
+  },{threshold:.12});
+  els.forEach(el=>obs.observe(el));
+}
+
+// ===================== INK =====================
+function triggerInk(){
+  ['ink1','ink2','ink3'].forEach((id,i)=>{
+    const el=document.getElementById(id);
+    if(el){
+      el.classList.remove('go');
+      setTimeout(()=>el.classList.add('go'),200+i*180);
+    }
+  });
+}
+
+// ===================== TOAST =====================
+let toastTimer;
+function showToast(msg){
+  const t=document.getElementById('toast');
+  t.textContent=msg;
+  t.classList.add('on');
+  clearTimeout(toastTimer);
+  toastTimer=setTimeout(()=>t.classList.remove('on'),2400);
+}
+
+// ===================== RENDER PRODUCTS =====================
+function renderProducts(){
+  const fg=document.getElementById('featured-grid');
+  if(fg)fg.innerHTML=PRODUCTS.slice(0,4).map(makeCard).join('');
+  const sg=document.getElementById('shop-grid');
+  if(sg){
+    sg.innerHTML=PRODUCTS.length?PRODUCTS.map(makeCard).join(''):'<div style="padding:3rem;text-align:center;color:var(--gr);font-size:.88rem">No products loaded yet</div>';
+    const cl=document.getElementById('shop-count');
+    if(cl)cl.textContent=`Showing ${PRODUCTS.length} product${PRODUCTS.length!==1?'s':''}`;
+  }
+}
+
+// ===================== SEARCH =====================
+let srchTimer;
+function openSearch(){
+  document.getElementById('srch-ov').classList.add('on');
+  document.body.style.overflow='hidden';
+  setTimeout(()=>document.getElementById('srch-input')?.focus(),120);
+}
+function closeSearch(){
+  document.getElementById('srch-ov').classList.remove('on');
+  document.body.style.overflow='';
+  const inp=document.getElementById('srch-input');
+  if(inp)inp.value='';
+  const res=document.getElementById('srch-results');
+  if(res)res.innerHTML='<div class="srch-hint">Start typing to search our full collection</div>';
+}
+function srchOvClick(e){if(e.target===document.getElementById('srch-ov'))closeSearch();}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeSearch();});
+document.getElementById('srch-input')?.addEventListener('input',function(){
+  clearTimeout(srchTimer);
+  const q=this.value.trim();
+  const res=document.getElementById('srch-results');
+  if(!q){res.innerHTML='<div class="srch-hint">Start typing to search our full collection</div>';return;}
+  res.innerHTML='<div class="srch-loading">Searching…</div>';
+  srchTimer=setTimeout(()=>doSearch(q),360);
+});
+async function doSearch(q){
+  const res=document.getElementById('srch-results');
+  try{
+    const r=await fetch(API_BASE+'/search?query='+encodeURIComponent(q));
+    const raw=await r.json();
+    const results=Array.isArray(raw)?raw:raw.results||[];
+    if(!results.length){res.innerHTML='<div class="srch-none">No results for "<strong>'+q+'</strong>"</div>';return;}
+    res.innerHTML='<div class="srch-grid">'+results.map(p=>{
+      const catName=p.category?.name||(typeof p.category==='string'?p.category:'Other');
+      const cat=(catName).toLowerCase().replace(/[^a-z]/g,'');
+      const srchSrc=resolveImg(p.image);
+      const imgHtml=srchSrc
+        ?`<img src="${srchSrc}" alt="${p.name}" style="width:100%;height:100%;object-fit:contain;padding:.75rem" onerror="imgFallback(this,'${cat}')">`
+        :bottleSVG(cat);
+      return`<div class="pc" style="cursor:pointer">
+        <div class="pc-img">${imgHtml}</div>
+        <div class="pc-body">
+          <div class="pc-cat">${catName}</div>
+          <div class="pc-name">${p.name}</div>
+          <div class="pc-foot">
+            <div class="pc-price">${fmt(parseFloat(p.price)||0)}</div>
+            <button class="pc-add" onclick="addToCart(${p.id},this)">+</button>
+          </div>
+        </div>
+      </div>`;
+    }).join('')+'</div>';
+  }catch(e){res.innerHTML='<div class="srch-none">Search unavailable right now</div>';}
+}
+
+// FILTER BUTTONS — handled per-button inside loadProducts() after API rebuild
+// This fallback covers the hardcoded buttons visible before API loads
+document.getElementById('filter-btns')?.addEventListener('click',function(e){
+  const fb=e.target.closest('.fb');
+  if(!fb)return;
+  document.querySelectorAll('#filter-btns .fb').forEach(b=>b.classList.remove('on'));
+  fb.classList.add('on');
+  filterProducts(fb.dataset.cat);
+});
+
+// ===================== CANVAS BLINK =====================
+(function(){
+  const img=document.getElementById('mascot-img');
+  const canvas=document.getElementById('blink-canvas');
+  if(!img||!canvas)return;
+
+  // Eye positions as fraction of natural image dimensions
+  // Left glass centre, Right glass centre — tweak cx/cy if needed
+  const EYES=[
+    {cx:0.43,cy:0.47,rx:0.078,ry:0.05},
+    {cx:0.58,cy:0.46,rx:0.078,ry:0.05}
+  ];
+  const BLINK_INTERVAL=4200; // ms between blinks
+  const CLOSE_MS=90;
+  const HOLD_MS=110;
+  const OPEN_MS=90;
+
+  let blinkStart=null;
+  let nextBlink=Date.now()+BLINK_INTERVAL;
+  let rafId=null;
+
+  function blinkValue(now){
+    if(!blinkStart) return 0;
+    const t=now-blinkStart;
+    if(t<CLOSE_MS) return t/CLOSE_MS;
+    if(t<CLOSE_MS+HOLD_MS) return 1;
+    const o=t-CLOSE_MS-HOLD_MS;
+    if(o<OPEN_MS) return 1-o/OPEN_MS;
+    blinkStart=null;
+    nextBlink=now+BLINK_INTERVAL+(Math.random()*1200-600);
+    return 0;
+  }
+
+  function draw(){
+    const now=Date.now();
+    if(!blinkStart && now>=nextBlink) blinkStart=now;
+
+    const bv=blinkValue(now);
+    const w=canvas.offsetWidth, h=canvas.offsetHeight;
+    canvas.width=w; canvas.height=h;
+    const ctx=canvas.getContext('2d');
+    ctx.clearRect(0,0,w,h);
+
+    if(bv>0 && img.naturalWidth){
+      const nw=img.naturalWidth, nh=img.naturalHeight;
+      const scale=Math.min(w/nw, h/nh);
+      const rw=nw*scale, rh=nh*scale;
+      const ox=(w-rw)/2, oy=(h-rh)/2;
+
+      ctx.fillStyle='rgba(22,12,5,0.92)';
+      EYES.forEach(e=>{
+        const ex=ox+rw*e.cx, ey=oy+rh*e.cy;
+        const erx=rw*e.rx, ery=rh*e.ry*bv;
+        ctx.beginPath();
+        ctx.ellipse(ex,ey,erx,ery,0,0,Math.PI*2);
+        ctx.fill();
+      });
+    }
+    rafId=requestAnimationFrame(draw);
+  }
+
+  function start(){
+    if(rafId) cancelAnimationFrame(rafId);
+    draw();
+  }
+
+  img.addEventListener('load',start);
+  if(img.complete && img.naturalWidth) start();
+})();
+
+
+// ===================== INIT =====================
+document.querySelectorAll('.yr').forEach(el=>el.textContent=new Date().getFullYear());
+loadProducts();
+syncCart();
+initReveal();
+triggerInk();
+</script>
+
+<script>
+/* ===== MICRO-INTERACTIONS ===== */
+
+// SCROLL PROGRESS BAR
+(function(){
+  const bar = document.createElement('div');
+  bar.id = 'scroll-prog';
+  document.body.prepend(bar);
+  window.addEventListener('scroll', () => {
+    const pct = window.scrollY / (document.documentElement.scrollHeight - window.innerHeight);
+    bar.style.width = (Math.min(pct,1) * 100) + '%';
+  }, {passive:true});
+})();
+
+// NAV SCROLL STATE
+(function(){
+  const nav = document.querySelector('.nav');
+  window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 40), {passive:true});
+})();
+
+// CUSTOM CURSOR (desktop only)
+(function(){
+  if(window.matchMedia('(pointer:coarse)').matches) return;
+  const dot = document.createElement('div'); dot.id = 'cur-dot';
+  const ring = document.createElement('div'); ring.id = 'cur-ring';
+  document.body.append(dot, ring);
+  let mx = 0, my = 0, rx = 0, ry = 0;
+  document.addEventListener('mousemove', e => {
+    mx = e.clientX; my = e.clientY;
+    dot.style.left = mx + 'px'; dot.style.top = my + 'px';
+  }, {passive:true});
+  (function loop(){
+    rx += (mx - rx) * 0.13;
+    ry += (my - ry) * 0.13;
+    ring.style.left = rx + 'px'; ring.style.top = ry + 'px';
+    requestAnimationFrame(loop);
+  })();
+  const hovEls = '.btn,.pc,.nl,.nav-cart,.nav-srch,.pc-add,.qb,.fb,.x-btn,.soc-pill,.mob-lnk,.footer-lnk,.sc-dot';
+  document.addEventListener('mouseover', e => {
+    if(e.target.closest(hovEls)){ dot.classList.add('hov'); ring.classList.add('hov'); }
+  });
+  document.addEventListener('mouseout', e => {
+    if(e.target.closest(hovEls)){ dot.classList.remove('hov'); ring.classList.remove('hov'); }
+  });
+})();
+
+// RIPPLE ON CLICKS
+document.addEventListener('click', e => {
+  const btn = e.target.closest('.btn,.pc-add,.fb,.qb');
+  if(!btn) return;
+  const r = btn.getBoundingClientRect();
+  const size = Math.max(r.width, r.height);
+  const el = document.createElement('span');
+  el.className = 'rpl';
+  el.style.cssText = `width:${size}px;height:${size}px;left:${e.clientX - r.left - size/2}px;top:${e.clientY - r.top - size/2}px`;
+  btn.appendChild(el);
+  setTimeout(() => el.remove(), 600);
+});
+
+// MAGNETIC PRIMARY BUTTONS
+function attachMagnetic(){
+  document.querySelectorAll('.btn-p,.btn-d').forEach(btn => {
+    if(btn.dataset.magnetic) return;
+    btn.dataset.magnetic = '1';
+    btn.addEventListener('mousemove', e => {
+      const r = btn.getBoundingClientRect();
+      const x = (e.clientX - r.left - r.width/2) * 0.2;
+      const y = (e.clientY - r.top - r.height/2) * 0.2;
+      btn.style.transform = `translate(${x}px,${y}px) translateY(-2px)`;
+    });
+    btn.addEventListener('mouseleave', () => { btn.style.transform = ''; });
+  });
+}
+attachMagnetic();
+
+// CARD 3D TILT (delegated — works on dynamically added cards)
+let _tiltCard = null;
+document.addEventListener('mousemove', e => {
+  const card = e.target.closest('.pc');
+  if(_tiltCard && _tiltCard !== card){
+    _tiltCard.style.transform = '';
+    _tiltCard.style.transition = 'transform .5s var(--ease),border-color .3s,box-shadow .3s';
+    setTimeout(() => { if(_tiltCard) _tiltCard.style.transition = ''; _tiltCard = null; }, 500);
+  }
+  if(!card) return;
+  _tiltCard = card;
+  card.style.transition = 'border-color .3s,box-shadow .3s';
+  const r = card.getBoundingClientRect();
+  const x = (e.clientX - r.left) / r.width - 0.5;
+  const y = (e.clientY - r.top) / r.height - 0.5;
+  card.style.transform = `perspective(700px) rotateY(${x*9}deg) rotateX(${-y*9}deg) translateY(-6px)`;
+}, {passive:true});
+
+// TEXT SCRAMBLE on hero headline
+(function(){
+  const CHARS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ#@!%&*';
+  function scramble(el, final, dur){
+    const frames = Math.round(dur / 38);
+    let f = 0;
+    const t = setInterval(() => {
+      el.textContent = final.split('').map((ch, i) => {
+        if(ch === ' ') return ' ';
+        return (f / frames > i / final.length) ? ch : CHARS[Math.floor(Math.random() * CHARS.length)];
+      }).join('');
+      if(++f >= frames){ el.textContent = final; clearInterval(t); }
+    }, 38);
+  }
+  setTimeout(() => {
+    const t = document.querySelector('.hero-hl .t');
+    const m = document.querySelector('.hero-hl .m');
+    if(t) scramble(t, t.dataset.text || t.textContent, 650);
+    if(m) setTimeout(() => scramble(m, m.textContent, 750), 180);
+  }, 700);
+})();
+
+// PERIODIC GLITCH on MAD
+(function(){
+  const el = document.querySelector('.hero-hl .t');
+  if(!el) return;
+  function glitch(){
+    el.classList.add('glitching');
+    setTimeout(() => el.classList.remove('glitching'), 200);
+    setTimeout(glitch, 4500 + Math.random() * 7000);
+  }
+  setTimeout(glitch, 3500);
+})();
+
+// COUNTER ANIMATION on stats
+(function(){
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if(!e.isIntersecting) return;
+      const el = e.target;
+      const target = parseInt(el.dataset.count);
+      if(!target){ obs.unobserve(el); return; }
+      const suffix = el.dataset.suffix || '';
+      const dur = 1600;
+      const start = Date.now();
+      const tick = setInterval(() => {
+        const p = Math.min((Date.now() - start) / dur, 1);
+        const eased = 1 - Math.pow(1 - p, 3);
+        el.textContent = Math.round(eased * target) + suffix;
+        if(p >= 1) clearInterval(tick);
+      }, 16);
+      obs.unobserve(el);
+    });
+  }, {threshold: 0.6});
+  document.querySelectorAll('.si-n[data-count]').forEach(el => obs.observe(el));
+})();
+
+// PAGE TRANSITION CURTAIN
+(function(){
+  const curtain = document.createElement('div');
+  curtain.style.cssText = 'position:fixed;inset:0;background:var(--black);z-index:1800;pointer-events:none;transform:scaleY(0);transform-origin:bottom;will-change:transform';
+  curtain.style.transition = 'transform .38s cubic-bezier(0.76,0,0.24,1)';
+  document.body.prepend(curtain);
+  const _orig = window.goPage;
+  window.goPage = function(id){
+    curtain.style.transformOrigin = 'bottom';
+    curtain.style.transform = 'scaleY(1)';
+    setTimeout(() => {
+      _orig(id);
+      attachMagnetic();
+      curtain.style.transformOrigin = 'top';
+      curtain.style.transform = 'scaleY(0)';
+    }, 340);
+  };
+})();
+</script>
+</body>
+</html>
