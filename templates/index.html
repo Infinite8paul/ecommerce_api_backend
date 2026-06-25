@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -446,7 +447,7 @@ button:focus-visible,a:focus-visible{outline:2px solid var(--teal);outline-offse
   <div class="w nav-in">
     <div class="nav-logo" onclick="goPage('home')">
       <div class="nav-mark">
-        <img src="./logo.jpg" alt="The Mad Monkey" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <img src="{% static 'images/logo.jpg' %}" alt="The Mad Monkey" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
         <div class="nav-mark-fb" style="display:none">MM</div>
       </div>
       <div class="nav-name">THE <em>MAD</em><br>MONKEY</div>
@@ -507,7 +508,7 @@ button:focus-visible,a:focus-visible{outline:2px solid var(--teal);outline-offse
     <!-- MASCOT -->
     <div class="hero-mascot">
       <div class="mascot-wrap" id="mascot-wrap">
-        <img src="./logo.jpg" alt="" id="mascot-img" onerror="this.style.display='none';document.getElementById('mascot-ghost').style.display='flex'">
+        <img src="{% static 'images/logo.jpg' %}" alt="" id="mascot-img" onerror="this.style.display='none';document.getElementById('mascot-ghost').style.display='flex'">
       </div>
       <div class="hero-mascot-ghost" id="mascot-ghost" style="display:none">
         <svg viewBox="0 0 200 220" fill="currentColor" style="color:var(--teal)">
@@ -525,7 +526,7 @@ button:focus-visible,a:focus-visible{outline:2px solid var(--teal);outline-offse
     <div class="w" style="position:relative;z-index:1;width:100%">
       <div class="hero-content">
         <div class="hero-mob-anchor">
-          <div class="hero-mob-anchor-img"><img src="./logo.jpg" alt="The Mad Monkey"></div>
+          <div class="hero-mob-anchor-img"><img src="{% static 'images/logo.jpg' %}" alt="The Mad Monkey"></div>
           <div class="hero-mob-anchor-txt">Nairobi's Wildest Pour<br>Wines · Spirits · Bar</div>
         </div>
         <div class="hero-eye rv">Nairobi's Wildest Pour</div>
@@ -568,7 +569,7 @@ button:focus-visible,a:focus-visible{outline:2px solid var(--teal);outline-offse
         <div class="pc rv">
           <div class="pc-img">
             <div class="pc-badge pc-badge-premium">Premium</div>
-            <img src="./HennessyVSOP.jpeg" alt="Hennessy VSOP"  style="width:100%;height:100%;object-fit:contain;padding:.75rem">
+            <img src="{% static 'images/hennessy.jpeg' %}" alt="Hennessy VSOP"  style="width:100%;height:100%;object-fit:contain;padding:.75rem">
           </div>
           <div class="pc-body">
             <div class="pc-cat">Cognac</div>
@@ -581,7 +582,7 @@ button:focus-visible,a:focus-visible{outline:2px solid var(--teal);outline-offse
           </div>
         </div>
         <div class="pc rv d1">
-          <div class="pc-img"><img src="./John Barr.jpeg" alt="John Barr Whisky" style="width:100%;height:100%;object-fit:contain;padding:.75rem"></div>
+          <div class="pc-img"><img src="{% static 'images/johnbarr.jpeg' %}" alt="John Barr Whisky" style="width:100%;height:100%;object-fit:contain;padding:.75rem"></div>
           <div class="pc-body">
             <div class="pc-cat">Whisky</div>
             <div class="pc-name">John Barr Whisky</div>
@@ -593,7 +594,7 @@ button:focus-visible,a:focus-visible{outline:2px solid var(--teal);outline-offse
           </div>
         </div>
         <div class="pc rv d2">
-          <div class="pc-img"><img src="./Kenya Cane.jpeg" alt="Kenya Cane Lemon" style="width:100%;height:100%;object-fit:contain;padding:.75rem"></div>
+          <div class="pc-img"><img src="{% static 'images/kenyacane.jpeg' %}" alt="Kenya Cane Lemon" style="width:100%;height:100%;object-fit:contain;padding:.75rem"></div>
           <div class="pc-body">
             <div class="pc-cat">Rum</div>
             <div class="pc-name">Kenya Cane Lemon</div>
@@ -605,7 +606,7 @@ button:focus-visible,a:focus-visible{outline:2px solid var(--teal);outline-offse
           </div>
         </div>
         <div class="pc rv d3">
-          <div class="pc-img"><img src="./CaptainMorgan.jpeg" alt="Captain Morgan" style="width:100%;height:100%;object-fit:contain;padding:.75rem"></div>
+          <div class="pc-img"><img src="{% static 'images/captainmorgan.jpeg' %}" alt="Captain Morgan" style="width:100%;height:100%;object-fit:contain;padding:.75rem"></div>
           <div class="pc-body">
             <div class="pc-cat">Rum</div>
             <div class="pc-name">Captain Morgan</div>
@@ -1133,7 +1134,7 @@ button:focus-visible,a:focus-visible{outline:2px solid var(--teal);outline-offse
 
 <script>
 // ===================== API =====================
-const API_BASE='https://ecommerceapibackend-production.up.railway.app';
+const API_BASE='/api';
 
 function getCartCode(){
   let c=localStorage.getItem('mm_cart');
@@ -1146,10 +1147,10 @@ let PRODUCTS=[];
 
 // Local featured products — used when API isn't available or for homepage cards
 const LOCAL_PRODUCTS=[
-  {id:'hennessy',name:'Hennessy VSOP',cat:'cognac',label:'Cognac',origin:'France',price:8900,image:'./hennessy.png.jpeg',blend:'multiply'},
-  {id:'johnbarr',name:'John Barr Whisky',cat:'whisky',label:'Whisky',origin:'Scotland',price:3200,image:'./johnbarr.jpg.jpeg'},
-  {id:'kenyacane',name:'Kenya Cane Lemon',cat:'rum',label:'Rum',origin:'Kenya',price:1800,image:'./kenyacane.jpg.jpeg',blend:'multiply'},
-  {id:'captainmorgan',name:'Captain Morgan',cat:'rum',label:'Rum',origin:'Caribbean',price:2800,image:'./captainmorgan.jpg.jpeg'},
+  {id:'hennessy',name:'Hennessy VSOP',cat:'cognac',label:'Cognac',origin:'France',price:8900,image:'./hennessy.jpeg',blend:'multiply'},
+  {id:'johnbarr',name:'John Barr Whisky',cat:'whisky',label:'Whisky',origin:'Scotland',price:3200,image:'./johnbarr.jpeg'},
+  {id:'kenyacane',name:'Kenya Cane Lemon',cat:'rum',label:'Rum',origin:'Kenya',price:1800,image:'./kenyacane.jpeg',blend:'multiply'},
+  {id:'captainmorgan',name:'Captain Morgan',cat:'rum',label:'Rum',origin:'Caribbean',price:2800,image:'./captainmorgan.jpeg'},
 ];
 
 const SKEL='<div class="pc-skeleton"><div class="sk-img"></div><div class="sk-line"></div><div class="sk-line short"></div></div>';
@@ -1157,9 +1158,7 @@ const SKEL='<div class="pc-skeleton"><div class="sk-img"></div><div class="sk-li
 function resolveImg(img){
   if(!img)return null;
   if(img.startsWith('http://')||img.startsWith('https://'))return img;
-  // Local relative path — return as-is
-  if(img.startsWith('./')||img.startsWith('../'))return img;
-  // Django media path (e.g. "img/products/bottle.jpg")
+  if(img.startsWith('./')||img.startsWith('../')||img.startsWith('/'))return img;
   return API_BASE+'/'+img.replace(/^\//,'');
 }
 
