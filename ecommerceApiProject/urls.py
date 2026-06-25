@@ -25,7 +25,7 @@ urlpatterns = [
     # 1. User Website (Root path)
     path('', TemplateView.as_view(template_name='index.html'), name='themadmonkey'),
     path('admin/', admin.site.urls),
-    path("api", include("apiApp.urls"))
+    path("api/", include("apiApp.urls"))
 ]
 
 
