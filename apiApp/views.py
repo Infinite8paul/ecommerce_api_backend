@@ -22,7 +22,13 @@ from django.conf import settings
 from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
 from rest_framework.decorators import api_view
-from rest_framework.response import Response
+
+import json
+from rest_framework.decorators import ( authentication_classes, permission_classes, parser_classes)
+from rest_framework.authentication import TokenAuthentication
+from rest_framework.permissions import IsAdminUser
+from rest_framework.parsers import MultiPartParser, FormParser
+from .serializers import ProductCreateSerializer
 
 # Create your views here.
 stripe.api_key = settings.STRIPE_SECRET_KEY
@@ -30,6 +36,26 @@ endpoint_secret = settings.WEBHOOK_SECRET
 
 
 User = get_user_model()
+
+@api_view(["POST"])
+@authentication_classes([TokenAuthentication])
+@permission_classes([IsAdminUser])
+@parser_classes([MultiPartParser, FormParser])
+def create_product(request):
+    try:
+        payload = json.loads(request.data.get("payload", "{}"))
+    except json.JSONDecodeError:
+        return Response({"error": "Invalid JSON in 'payload' field"}, status=status.HTTP_400_BAD_REQUEST)
+
+    data = dict(payload)
+    if "image" in request.FILES:
+        data["image"] = request.FILES["image"]
+
+    serializer = ProductCreateSerializer(data=data)
+    if serializer.is_valid():
+        product = serializer.save()
+        return Response(ProductCreateSerializer(product).data, status=status.HTTP_201_CREATED)
+    return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 @api_view(['GET'])
 def product_list(request):

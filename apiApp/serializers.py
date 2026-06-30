@@ -1,10 +1,20 @@
 from rest_framework import serializers 
 from django.contrib.auth import get_user_model
 from .models import Cart, CartItem, CustomerAddress, Order, OrderItem, Product, Category, ProductRating, Review, Wishlist
+from django.utils.text import slugify
 
 
+class ProductCreateSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Product
+        fields = ["name", "description", "price", "slug", "image", "featured", "category"]
+        extra_kwargs = {"slug": {"required": False}}
 
-
+    def create(self, validated_data):
+        if not validated_data.get("slug"):
+            validated_data["slug"] = slugify(validated_data["name"])
+        return super().create(validated_data)
+        
 class ProductListSerializer(serializers.ModelSerializer):
     class Meta:
         model = Product
