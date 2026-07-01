@@ -5,6 +5,11 @@ from django.utils.text import slugify
 
 
 class ProductCreateSerializer(serializers.ModelSerializer):
+    category = serializers.SlugRelatedField(
+        slug_field="name",
+        queryset=Category.objects.all(),
+    )
+
     class Meta:
         model = Product
         fields = ["name", "description", "price", "slug", "image", "featured", "category"]
@@ -12,6 +17,7 @@ class ProductCreateSerializer(serializers.ModelSerializer):
 
     def create(self, validated_data):
         if not validated_data.get("slug"):
+            from django.utils.text import slugify
             validated_data["slug"] = slugify(validated_data["name"])
         return super().create(validated_data)
         

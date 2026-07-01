@@ -51,6 +51,16 @@ def create_product(request):
     if "image" in request.FILES:
         data["image"] = request.FILES["image"]
 
+    name = data.get("name", "").strip()
+    if not name:
+        return Response({"error": "Product name is required"}, status=status.HTTP_400_BAD_REQUEST)
+
+    if Product.objects.filter(name=name).exists():
+        return Response(
+            {"error": f"A product named '{name}' already exists.", "duplicate": True},
+            status=status.HTTP_409_CONFLICT,
+        )
+
     serializer = ProductCreateSerializer(data=data)
     if serializer.is_valid():
         product = serializer.save()
